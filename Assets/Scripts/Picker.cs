@@ -3,15 +3,22 @@ using System.Collections;
 
 public class Picker : MonoBehaviour {
 
+    public float RaycastLength = 10f;
     public Transform PickupAnchor;
     RaycastHit[] pickupHits = new RaycastHit[20];
+
+    public bool HasPickup { get { return PickupAnchor.transform.childCount > 0; } }
 
     // Update is called once per frame
     void Update()
     {
+        if (HasPickup)
+        {
+        }
+
         if (Input.GetButtonDown("Fire1"))
         {
-            if (PickupAnchor.transform.childCount > 0)
+            if (HasPickup)
             {
                 DropObject();
             }
@@ -25,7 +32,7 @@ public class Picker : MonoBehaviour {
     void PickupObjectInFront()
     {
         Ray testRay = new Ray(transform.position, transform.forward);
-        int results = Physics.RaycastNonAlloc(testRay, pickupHits, 10f);
+        int results = Physics.RaycastNonAlloc(testRay, pickupHits, RaycastLength);
         if (results > 0)
         {
             PickUpObject pickupable = null;
@@ -64,6 +71,6 @@ public class Picker : MonoBehaviour {
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, transform.position + transform.forward * 10f);
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward * RaycastLength);
     }
 }
