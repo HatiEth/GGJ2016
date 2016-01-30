@@ -44,11 +44,12 @@ public class ConstraintSpawner : MonoBehaviour {
                 int nr = (int)(Desc.Spawnables[i].Asset.Count * Random.value);
                 GameObject Asset = GetCache(Desc.Spawnables[i].Asset[nr]);
 
-                Bounds Area = new Bounds(transform.position, transform.lossyScale);
+                Bounds Area = new Bounds(transform.position, transform.localScale);
                 Vector3 Position = Area.min + new Vector3((Area.max.x - Area.min.x) * UnityEngine.Random.value, (Area.max.y - Area.min.y) * UnityEngine.Random.value, (Area.max.z - Area.min.z) * UnityEngine.Random.value);
                 Quaternion Rotation = new Quaternion();
                 bool no = false;
                 SpawnConstraintOptions Options = new SpawnConstraintOptions();
+                Options.SpawnArea = Area;
                 for (int x = 0; x < Desc.Spawnables[i].SpawnRules.Count; x++)
                 {
                     string s = Desc.Spawnables[i].SpawnRules[x];

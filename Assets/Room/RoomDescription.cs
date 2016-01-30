@@ -34,6 +34,7 @@ public struct RoomDescription {
 
 public struct SpawnConstraintOptions
 {
+    public Bounds SpawnArea;
     public bool IsFixed;
 }
 

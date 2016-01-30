@@ -25,7 +25,6 @@ public class RoomScript : MonoBehaviour {
 	void Start () {
         GenerateStructure();
         spwn.GenerateContent();
-        Destroy(spwn.transform.parent.gameObject);
     }
 
     void GenerateStructure()
