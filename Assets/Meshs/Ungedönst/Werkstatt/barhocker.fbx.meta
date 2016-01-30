@@ -1,0 +1,100 @@
+fileFormatVersion: 2
+guid: 20dc63dfbfb361545b7de548c9f7b5ae
+timeCreated: 1454183544
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: barhocker
+    100004: Cube.002
+    400000: //RootNode
+    400002: barhocker
+    400004: Cube.002
+    2300000: barhocker
+    2300002: Cube.002
+    3300000: barhocker
+    3300002: Cube.002
+    4300000: Cube.002
+    4300002: barhocker
+    7400000: barhocker|barhocker|Default Take|Layer0
+    7400002: barhocker|Boiler 2 |Take 001|BaseLayer
+    7400004: barhocker|Boiler|Take 001|BaseLayer
+    7400006: barhocker|Camera.001|Default Take|Layer0
+    7400008: barhocker|Camera001.Target|Take 001|BaseLayer
+    7400010: barhocker|Camera001|Take 001|BaseLayer
+    7400012: barhocker|Cube_002|Default Take|Layer0
+    7400014: barhocker|kn_pfe|Default Take|Layer0
+    7400016: barhocker|Lamp.001|Default Take|Layer0
+    7400018: barhocker|Pferdschaukel|Default Take|Layer0
+    7400020: barhocker|Pferd|Default Take|Layer0
+    7400022: barhocker|puppe|Default Take|Layer0
+    7400024: barhocker|radio|Default Take|Layer0
+    7400026: barhocker|Ring|Take 001|BaseLayer
+    7400028: barhocker|saege.001|Default Take|Layer0
+    7400030: barhocker|saege|Default Take|Layer0
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
