@@ -7,12 +7,15 @@ public class Picker : MonoBehaviour {
     public float RaycastLength = 10f;
     public Transform PickupAnchor;
     RaycastHit[] pickupHits = new RaycastHit[20];
+    int currentInteractHits;
 
     public bool HasPickup { get { return PickupAnchor.transform.childCount > 0; } }
 
     // Update is called once per frame
     void Update()
     {
+        Ray testRay = new Ray(transform.position, transform.forward);
+        currentInteractHits = Physics.RaycastNonAlloc(testRay, pickupHits, RaycastLength);
         if (Input.GetButtonDown("Fire1"))
         {
             if (HasPickup)
@@ -21,35 +24,24 @@ public class Picker : MonoBehaviour {
             }
             else
             {
-                PickupObjectInFront();
+                InteractWithObjectInFront();
             }
         }
     }
 
-    void PickupObjectInFront()
+    void InteractWithObjectInFront()
     {
-        Ray testRay = new Ray(transform.position, transform.forward);
-        int results = Physics.RaycastNonAlloc(testRay, pickupHits, RaycastLength);
-        if (results > 0)
+        if (currentInteractHits > 0)
         {
-            for (int i = 0; i < results; ++i)
+            for (int i = 0; i < currentInteractHits; ++i)
             {
                 var hitTransform = pickupHits[i].transform;
-                var po = hitTransform.GetComponent<Pickup>();
+                var po = hitTransform.GetComponent<Interactable>();
                 if (po != null)
                 {
-                    hitTransform.parent = PickupAnchor.transform;
-                    hitTransform.localPosition = Vector3.zero;
-
-                    hitTransform.GetComponent<Rigidbody>().useGravity = false;
-                    hitTransform.GetComponent<Rigidbody>().isKinematic = true;
-                    hitTransform.gameObject.layer = LayerMask.NameToLayer("PickedUp");
-
-                    po.IsPickedUp = true;
-
-                    break;
+                    po.Interact(this);
                 }
-
+                break;
             }
         }
     }

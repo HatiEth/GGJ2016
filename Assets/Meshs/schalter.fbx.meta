@@ -1,67 +1,22 @@
 fileFormatVersion: 2
-guid: a883590ea91334c4d8c39648a4f52def
-timeCreated: 1454118314
+guid: 298f38fae2fa8534cb4a9bd56665beef
+timeCreated: 1454121847
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cube
-    100004: Cube.001
-    100006: Cylinder
-    100008: Icosphere
-    100010: Sphere
-    100012: Sphere.001
-    100014: Sphere.002
-    100016: Sphere.003
-    100018: Sphere.004
-    100020: Torus.002
-    100022: COLLISION
-    400000: //RootNode
-    400002: Cube
-    400004: Cube.001
-    400006: Cylinder
-    400008: Icosphere
-    400010: Sphere
-    400012: Sphere.001
-    400014: Sphere.002
-    400016: Sphere.003
-    400018: Sphere.004
-    400020: Torus.002
-    400022: COLLISION
+    100000: Cube
+    100002: Cube.001
+    100004: //RootNode
+    400000: Cube
+    400002: Cube.001
+    400004: //RootNode
     2300000: Cube
     2300002: Cube.001
-    2300004: Cylinder
-    2300006: Icosphere
-    2300008: Sphere
-    2300010: Sphere.001
-    2300012: Sphere.002
-    2300014: Sphere.003
-    2300016: Sphere.004
-    2300018: Torus.002
-    2300020: COLLISION
     3300000: Cube
     3300002: Cube.001
-    3300004: Cylinder
-    3300006: Icosphere
-    3300008: Sphere
-    3300010: Sphere.001
-    3300012: Sphere.002
-    3300014: Sphere.003
-    3300016: Sphere.004
-    3300018: Torus.002
-    3300020: COLLISION
-    4300000: Torus.002
-    4300002: Cylinder
-    4300004: Sphere.004
-    4300006: Sphere.003
-    4300008: Cube.001
-    4300010: Cube
-    4300012: Sphere.002
-    4300014: Sphere.001
-    4300016: Sphere
-    4300018: Icosphere
-    4300020: COLLISION
+    4300000: Cube.001
+    4300002: Cube
   materials:
     importMaterials: 1
     materialName: 0
