@@ -12,6 +12,8 @@ GameObject:
   - 114: {fileID: 11414254}
   - 65: {fileID: 6521614}
   - 114: {fileID: 11417540}
+  - 65: {fileID: 6544764}
+  - 65: {fileID: 6530632}
   m_Layer: 0
   m_Name: waeschestaender
   m_TagString: Untagged
@@ -43,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53.80098, y: 11.159063, z: -2.2829971}
+  m_LocalPosition: {x: -1822.9445, y: 1228.7782, z: 1075.5287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 447372}
@@ -55,7 +57,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186952}
-  m_LocalRotation: {x: 0.70706826, y: 0.007389612, z: 0.70706826, w: 0.007369658}
+  m_LocalRotation: {x: 0.7070683, y: 0.007389612, z: 0.7070683, w: 0.007369658}
   m_LocalPosition: {x: -0.08043757, y: 0.17788337, z: 0.8099466}
   m_LocalScale: {x: 50.989952, y: 50.989964, z: 50.989964}
   m_Children: []
@@ -119,8 +121,32 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.247047, y: 4.674525, z: 4.3442855}
+  m_Center: {x: -0.26245117, y: 2.1679688, z: 0.56396484}
+--- !u!65 &6530632
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9942575, y: 0.7278862, z: 2.9053755}
+  m_Center: {x: -0.31115723, y: 4.95813, z: 3.908081}
+--- !u!65 &6544764
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9551785, y: 0.6502285, z: 3.0415897}
+  m_Center: {x: -0.25268555, y: 4.8997803, z: -3.1207275}
 --- !u!114 &11414254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPickedUp: 0
+  OnceWasPickedUp: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

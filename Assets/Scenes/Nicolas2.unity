@@ -214,6 +214,13 @@ MonoBehaviour:
     Clr: {fileID: 2100000, guid: c5d2ec53ad5e49b49a110580d4cbba3d, type: 2}
   - Name: Wohnzimmer
     Spawnables:
+    - Name: Teppiche
+      Asset:
+      - {fileID: 172646, guid: fb43ba31a6e7ed444b8fcf2d4103b34e, type: 2}
+      SpawnRules:
+      - Bottom
+      - Common
+      AverageAmount: 2
     - Name: "Wandm\xF6bel"
       Asset:
       - {fileID: 122140, guid: eabc54554b509464f9e370181d82e90c, type: 2}
@@ -221,7 +228,7 @@ MonoBehaviour:
       - {fileID: 190900, guid: 79171d9223856f641870db0dd96534ff, type: 2}
       - {fileID: 195108, guid: a9585fe694e629f4faaae36ca58cbdcf, type: 2}
       - {fileID: 114560, guid: cc6fdac78f6b87c4dbcbacf6d65e0a2f, type: 2}
-      - {fileID: 113684, guid: e5109ebcc1746e042b62e59733d5c079, type: 2}
+      - {fileID: 117734, guid: 0e77be1b5d2a0d24897f43a1f7d1ecfe, type: 2}
       SpawnRules:
       - Side
       - Bottom
@@ -229,7 +236,7 @@ MonoBehaviour:
       AverageAmount: 16
     - Name: Spielzeug
       Asset:
-      - {fileID: 150358, guid: f864e61e760525b4b95af8da91f313bc, type: 2}
+      - {fileID: 110430, guid: f1427e36360ae064ab6059c8fabd150b, type: 2}
       - {fileID: 108956, guid: 42a9fa9a30c433d46af12799222db4fb, type: 2}
       - {fileID: 167168, guid: a8e89f12044daea4a86774d8cfa7a707, type: 2}
       - {fileID: 110866, guid: e0f219c0ead1af14c8600fd91cd886c6, type: 2}
@@ -237,6 +244,10 @@ MonoBehaviour:
       - {fileID: 135172, guid: 0612548ec630b4244b84a5ce2b1e426d, type: 2}
       - {fileID: 177486, guid: 4d4ca89aae70f6f48b6b16d6ea8c5d72, type: 2}
       - {fileID: 127598, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+      - {fileID: 113684, guid: e5109ebcc1746e042b62e59733d5c079, type: 2}
+      - {fileID: 192304, guid: c1ea45f69b6fded4d8e782366e0d50f4, type: 2}
+      - {fileID: 156298, guid: 5ff968c47e21e1644b5bf921c1b1fb0a, type: 2}
+      - {fileID: 143980, guid: 8bb02638b1ad883479f82de43c1635f7, type: 2}
       SpawnRules:
       - Bottom
       - Common
