@@ -14,6 +14,8 @@ public class KnifeScan : MonoBehaviour {
 
     public bool StickyOnCollision = true;
 
+    public float ChargeSpeed = 50f;
+
     // Use this for initialization
     void Start()
     {
@@ -70,7 +72,7 @@ public class KnifeScan : MonoBehaviour {
 
         while ((targetPosAfterAim - transform.position).magnitude > 10f)
         {
-            rigidbody.MovePosition(transform.position + (targetPosAfterAim - transform.position).normalized * 50f * Time.fixedDeltaTime);
+            rigidbody.MovePosition(transform.position + (targetPosAfterAim - transform.position).normalized * ChargeSpeed * Time.fixedDeltaTime);
             yield return null;
         }
 
