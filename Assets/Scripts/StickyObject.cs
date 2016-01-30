@@ -51,9 +51,19 @@ public class StickyObject : MonoBehaviour {
 
     void AddToOwnGroup(StickyObject obj)
     {
+        StartCoroutine(DelaySticky(obj));
+    }
+
+    IEnumerator DelaySticky(StickyObject obj)
+    {
+        for (int i = 0; i < 10; ++i)
+        {
+            yield return null;
+        }
         Destroy(obj.GetComponent<Rigidbody>());
         obj.GetComponent<StickyObject>().group = group;
         obj.transform.parent = group.transform;
+
     }
 
     void CreateStickyGroup()
