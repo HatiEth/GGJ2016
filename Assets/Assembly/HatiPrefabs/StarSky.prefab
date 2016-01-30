@@ -39,9 +39,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0365223fe2f1e41b403664b497fd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WindowPrefab: {fileID: 114318, guid: ee5efb717861b024a98d1bfe8a128452, type: 2}
   StarPrefab: {fileID: 192764, guid: f3d179058cc47484996c26e562a9cd0e, type: 2}
-  StarCount: 10
-  Radius: 38.94
+  StarCount: 15
+  Radius: 40
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
