@@ -35,6 +35,8 @@ GameObject:
   - 65: {fileID: 6501672}
   - 65: {fileID: 6529692}
   - 65: {fileID: 6527864}
+  - 114: {fileID: 11435668}
+  - 114: {fileID: 11489550}
   m_Layer: 0
   m_Name: "Regal_H\xE4ngen02"
   m_TagString: Untagged
@@ -323,6 +325,29 @@ MonoBehaviour:
       - {fileID: 156088, guid: 19abdb4236bb345478a46b591c5b4fff, type: 2}
       SpawnRules: []
       AverageAmount: 2
+--- !u!114 &11435668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9989eae5379c4d4bae6748cd28a5476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPickedUp: 0
+--- !u!114 &11489550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d84990ea26b5784894989e7dbf70662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

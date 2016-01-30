@@ -27,6 +27,8 @@ GameObject:
   - 23: {fileID: 2332770}
   - 54: {fileID: 5422346}
   - 65: {fileID: 6589540}
+  - 114: {fileID: 11455484}
+  - 114: {fileID: 11440414}
   m_Layer: 0
   m_Name: "Klavierw\xFCrfel"
   m_TagString: Untagged
@@ -198,6 +200,29 @@ MonoBehaviour:
       - {fileID: 114560, guid: cc6fdac78f6b87c4dbcbacf6d65e0a2f, type: 2}
       SpawnRules: []
       AverageAmount: 1
+--- !u!114 &11440414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d84990ea26b5784894989e7dbf70662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11455484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9989eae5379c4d4bae6748cd28a5476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPickedUp: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

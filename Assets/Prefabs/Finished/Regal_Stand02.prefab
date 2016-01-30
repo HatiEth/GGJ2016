@@ -83,6 +83,8 @@ GameObject:
   - 65: {fileID: 6501574}
   - 65: {fileID: 6505938}
   - 65: {fileID: 6532956}
+  - 114: {fileID: 11496868}
+  - 114: {fileID: 11444594}
   m_Layer: 0
   m_Name: Regal_Stand02
   m_TagString: Untagged
@@ -312,6 +314,17 @@ MonoBehaviour:
   SpawnAtStart: 1
   Desc:
     Spawnables: []
+--- !u!114 &11444594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d84990ea26b5784894989e7dbf70662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11461538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,6 +367,18 @@ MonoBehaviour:
   SpawnAtStart: 1
   Desc:
     Spawnables: []
+--- !u!114 &11496868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9989eae5379c4d4bae6748cd28a5476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPickedUp: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
