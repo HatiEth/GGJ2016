@@ -10,6 +10,9 @@ public class KnifeScan : MonoBehaviour {
     public bool IsFiring = false;
     public bool IsAlive = true;
 
+    private bool wasFiringOnce = false;
+
+    public bool StickyOnCollision = true;
 
     // Use this for initialization
     void Start()
@@ -52,6 +55,7 @@ public class KnifeScan : MonoBehaviour {
     {
         IsFiring = true;
         var rigidbody = this.GetComponent<Rigidbody>();
+        if (rigidbody == null) yield break;
         rigidbody.isKinematic = true;
         
 
@@ -76,6 +80,7 @@ public class KnifeScan : MonoBehaviour {
         yield return new WaitForSeconds(Random.Range(5, 10));
         StartChance = -StartChance;
         IsFiring = false;
+        wasFiringOnce = true;
         yield break;
     }
 
@@ -89,16 +94,25 @@ public class KnifeScan : MonoBehaviour {
 
     public void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collision with " + collision.gameObject.name);
-        if (collision.gameObject.CompareTag("Player") || (collision.transform.GetComponent<StickyObject>() == null && collision.transform.GetComponent<StickyGroup>() == null))
+        if (!wasFiringOnce) return;
+        if (StickyOnCollision)
         {
-            transform.parent = collision.transform;
-            Destroy(GetComponent<Rigidbody>());
-            Destroy(GetComponent<StickyObject>());
-            Destroy(GetComponent<Pickup>());
-        }
+            if (collision.gameObject.CompareTag("Player") || (collision.transform.GetComponent<StickyObject>() == null && collision.transform.GetComponent<StickyGroup>() == null))
+            {
+                transform.parent = collision.transform;
+                Destroy(GetComponent<Rigidbody>());
+                Destroy(GetComponent<StickyObject>());
+                Destroy(GetComponent<Pickup>());
+                IsAlive = false;
+            }
 
-        if (collision.transform.GetComponent<StickyObject>() != null || collision.transform.GetComponent<StickyGroup>() != null)
+            if (collision.transform.GetComponent<StickyObject>() != null || collision.transform.GetComponent<StickyGroup>() != null)
+            {
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
+                IsAlive = false;
+            }
+        }
+        else
         {
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             IsAlive = false;
