@@ -45,7 +45,6 @@ public class KnifeScan : MonoBehaviour {
             }
             else
             {
-                Debug.DrawRay (transform.position, (Player.position - transform.position) *1000, Color.red);
             }
             yield return null;
             gameObject.layer = old;
@@ -79,7 +78,7 @@ public class KnifeScan : MonoBehaviour {
         rigidbody.isKinematic = false;
         rigidbody.AddForce(dir, ForceMode.Impulse);
 
-        yield return new WaitForSeconds(Random.Range(5, 10));
+        yield return new WaitForSeconds(Random.Range(1, 2));
         StartChance = -StartChance;
         IsFiring = false;
         wasFiringOnce = true;
@@ -105,6 +104,7 @@ public class KnifeScan : MonoBehaviour {
                 Destroy(GetComponent<Rigidbody>());
                 Destroy(GetComponent<StickyObject>());
                 Destroy(GetComponent<Pickup>());
+                Destroy(GetComponent<Collider>());
                 IsAlive = false;
             }
 

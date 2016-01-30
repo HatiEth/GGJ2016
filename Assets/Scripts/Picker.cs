@@ -27,6 +27,10 @@ public class Picker : MonoBehaviour {
                 InteractWithObjectInFront();
             }
         }
+        if (Input.GetButtonDown("Fire2") && HasPickup)
+        {
+            StartCoroutine(RotatePickup());
+        }
     }
 
     void InteractWithObjectInFront()
@@ -66,6 +70,21 @@ public class Picker : MonoBehaviour {
             }
 
             Children[i].GetComponent<Pickup>().IsPickedUp = false;
+        }
+    }
+
+    IEnumerator RotatePickup()
+    {
+        Vector3 mp = Input.mousePosition;
+        while (!Input.GetButtonUp("Fire2"))
+        {
+            yield return null;
+            Vector3 mdelta = Input.mousePosition - mp;
+            float yRot = Input.GetAxis("Mouse X");
+            float xRot = Input.GetAxis("Mouse Y");
+
+            PickupAnchor.GetChild(0).localRotation *= Quaternion.Euler (0f, 0f, yRot);
+            PickupAnchor.localRotation *= Quaternion.Euler (-xRot, 0f, 0f);
         }
     }
 
