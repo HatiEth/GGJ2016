@@ -407,7 +407,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 465574, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11448104, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
       propertyPath: screenBlendMode
@@ -432,6 +432,38 @@ Prefab:
     - target: {fileID: 10845500, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
       propertyPath: m_BounceIntensity
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 13655056, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426116, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
+      propertyPath: movementSettings.SlopeCurveModifier.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426116, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
+      propertyPath: movementSettings.RunMultiplier
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11423566, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426116, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
+      propertyPath: movementSettings.JumpForce
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 400250, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400250, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400250, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11448104, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
