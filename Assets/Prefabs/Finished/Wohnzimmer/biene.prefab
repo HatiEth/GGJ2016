@@ -12,6 +12,8 @@ GameObject:
   - 23: {fileID: 2329782}
   - 54: {fileID: 5433960}
   - 65: {fileID: 6528550}
+  - 114: {fileID: 11438532}
+  - 114: {fileID: 11462044}
   m_Layer: 0
   m_Name: biene
   m_TagString: Untagged
@@ -95,6 +97,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.6510994, y: 2.5805836, z: 7.111222}
   m_Center: {x: 1.2447975, y: -0.42507452, z: 0.13907327}
+--- !u!114 &11438532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9989eae5379c4d4bae6748cd28a5476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPickedUp: 0
+--- !u!114 &11462044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d84990ea26b5784894989e7dbf70662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
