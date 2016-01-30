@@ -9,7 +9,7 @@ public class CircularConstraint : SpawnConstraint
         Vector3 Center = Options.SpawnArea.center;
         Vector3 halfext = asset.GetComponent<Collider>().bounds.extents / 2;
 
-        position = Center + Quaternion.Euler(0, Rotation, 0) * new Vector3(10, 0, 0);
+        position = Center + Quaternion.Euler(0, Rotation, 0) * new Vector3(Options.SpawnArea.extents.x, 0, 0);
         if (Physics.CheckBox(position, halfext, rotation)) return false;
         return true;
     }

@@ -9,7 +9,7 @@ public class RoomGenerator : MonoBehaviour {
     public int size;
     public int RoomSize;
     public GameObject Room;
-    public List<RoomDescription> Biomes;
+    public List<Biom> Biomes;
     List<int> RoomDescs;
     public GameObject ConstraintSpawnerBluePrint;
 
@@ -51,12 +51,15 @@ public class RoomGenerator : MonoBehaviour {
 
                 scr.DoorNorth = north;
                 scr.DoorWest = west;
-                if ((Rooms.GetLength(0) / 2 ) == x && (Rooms.GetLength(0) / 2 ) == y)
+                if ((Rooms.GetLength(0) / 2) == x && (Rooms.GetLength(0) / 2) == y)
                 {
-                    scr.SetRoomDesc(Biomes[0], ConstraintSpawnerBluePrint);
+                    scr.SetRoomDesc(Biomes[0], ConstraintSpawnerBluePrint, Biomes[0].Clr);
                 }
                 else
-                    scr.SetRoomDesc(Biomes[RoomDescs[Rooms[x,y]]],ConstraintSpawnerBluePrint);
+                {
+                    scr.SetRoomDesc(Biomes[RoomDescs[Rooms[x, y]]], ConstraintSpawnerBluePrint,Biomes[RoomDescs[Rooms[x, y]]].Clr);
+
+                }
                 
             }
     }

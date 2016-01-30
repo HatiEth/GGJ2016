@@ -40,6 +40,7 @@ public class Pickup : MonoBehaviour, Interactable, Outlineable {
         else
         {
             Renderer[] rs = GetComponentsInChildren<Renderer>();
+
             foreach (Renderer r in rs)
             {
                 Material[] ms = r.materials;

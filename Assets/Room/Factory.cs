@@ -6,6 +6,7 @@ using System;
 [System.Serializable]
 public struct Spawnable
 {
+    public string Name;
     public List<GameObject> Asset;
     public List<string> SpawnRules;
     public int AverageAmount;
@@ -20,17 +21,13 @@ public struct Spawnable
         if (Rule == "Mid") return new MidConstraint();
         if (Rule == "OrientationToCenter") return new OrientationToCenterConstraint();
         if (Rule == "Circular") return new CircularConstraint();
+        if (Rule == "Rare") return new RareConstraint();
+        if (Rule == "Common") return new CommonConstraint();
+        if (Rule == "Uncommon") return new UncommenConstraint();
         Debug.Log("Constraint unkown: " + Rule);
         return null;
     }
 }
-
-[System.Serializable]
-public struct RoomDescription {
-    public List<Spawnable> Spawnables;
-
-}
-
 
 public struct SpawnConstraintOptions
 {
