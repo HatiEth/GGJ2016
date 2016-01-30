@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 469934}
   - 114: {fileID: 11429090}
   m_Layer: 0
-  m_Name: "K\xFCchentisch"
+  m_Name: "Ku\u0308chentisch"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,6 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5a8e30abda1d742aedb7c6dd6c7511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnAtStart: 0
   Desc:
     Spawnables:
     - Asset:
