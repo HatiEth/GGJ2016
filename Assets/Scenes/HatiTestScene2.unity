@@ -251,7 +251,7 @@ Transform:
   m_LocalScale: {x: 4, y: 1, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1001 &130419740
 Prefab:
   m_ObjectHideFlags: 0
@@ -993,6 +993,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1001 &1752819545
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 7c85028fcf0a84244be3f78056cfff37, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -33.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c85028fcf0a84244be3f78056cfff37, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 27.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c85028fcf0a84244be3f78056cfff37, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 34.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c85028fcf0a84244be3f78056cfff37, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000008146034
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c85028fcf0a84244be3f78056cfff37, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0000000754979
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c85028fcf0a84244be3f78056cfff37, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 6.211317e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c85028fcf0a84244be3f78056cfff37, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c85028fcf0a84244be3f78056cfff37, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7c85028fcf0a84244be3f78056cfff37, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &1902143639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1078,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
 --- !u!1001 &2100338456
 Prefab:
   m_ObjectHideFlags: 0
