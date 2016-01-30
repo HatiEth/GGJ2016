@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class ConstraintSpawner : MonoBehaviour {
 
     public bool SpawnAtStart;
-    public RoomDescription Desc;
+    public Biom Desc;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +18,7 @@ public class ConstraintSpawner : MonoBehaviour {
 	
 	}
 
-    void OnDrawGizmos()
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Vector3 siz = transform.localScale;
