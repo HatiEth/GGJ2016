@@ -32,11 +32,10 @@ public class Picker : MonoBehaviour {
         int results = Physics.RaycastNonAlloc(testRay, pickupHits, RaycastLength);
         if (results > 0)
         {
-            PickUpObject pickupable = null;
             for (int i = 0; i < results; ++i)
             {
                 var hitTransform = pickupHits[i].transform;
-                var po = hitTransform.GetComponent<PickUpObject>();
+                var po = hitTransform.GetComponent<Pickup>();
                 if (po != null)
                 {
                     hitTransform.parent = PickupAnchor.transform;
@@ -46,14 +45,7 @@ public class Picker : MonoBehaviour {
                     hitTransform.GetComponent<Rigidbody>().isKinematic = true;
                     hitTransform.gameObject.layer = LayerMask.NameToLayer("PickedUp");
 
-                    po.isPickedUp = true;
-
-                    if (hitTransform.GetComponent<FixedJoint>() != null)
-                    {
-                        //GameObject.Destroy(hitTransform.GetComponent<FixedJoint>());
-                        // Detach all fixed joints and detach from all fixed joints attached on
-                        po.DisconnectAllStickies();
-                    }
+                    po.IsPickedUp = true;
 
                     break;
                 }
@@ -81,7 +73,7 @@ public class Picker : MonoBehaviour {
                 rigidbody.gameObject.layer = 0;
             }
 
-            Children[i].GetComponent<PickUpObject>().isPickedUp = false;
+            Children[i].GetComponent<Pickup>().IsPickedUp = false;
         }
     }
 
