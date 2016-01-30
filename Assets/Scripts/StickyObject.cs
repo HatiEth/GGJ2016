@@ -8,9 +8,11 @@ public class StickyObject : MonoBehaviour {
 
     void Start()
     {
+        /*
         if (GetComponent<StickyGroup>() != null) {
             group = GetComponent<StickyGroup>();
         }
+        */
     }
 
     public void OnCollisionStay(Collision collision)
