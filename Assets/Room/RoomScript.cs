@@ -32,7 +32,7 @@ public class RoomScript : MonoBehaviour {
     void GenerateStructure()
     {
         Ground = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        Ground.transform.position = new Vector3(0, 0, 0) + transform.position;
+        Ground.transform.position = new Vector3(0, -0.5f, 0) + transform.position;
         Ground.transform.rotation = new Quaternion();
         Ground.transform.localScale = new Vector3(WallWidth, 1, WallWidth);
         Ground.name = "Ground";
