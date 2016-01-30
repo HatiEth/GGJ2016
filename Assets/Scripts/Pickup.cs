@@ -92,5 +92,8 @@ public class Pickup : MonoBehaviour, Interactable, Outlineable {
             }
 
         }
+
+
+
     }
 }
