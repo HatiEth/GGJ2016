@@ -160,7 +160,7 @@ Transform:
   m_LocalScale: {x: 4, y: 1, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &100152163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,9 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ece1c2721b1c464bbd0ebe7a8b05920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPickedUp: 0
-  connectees: []
-  rigidbody: {fileID: 0}
 --- !u!1001 &1024261514
 Prefab:
   m_ObjectHideFlags: 0
@@ -328,6 +325,55 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ff06143f28b43f4ab15a7263cd64c0f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1145352608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1145352610}
+  - 114: {fileID: 1145352609}
+  m_Layer: 0
+  m_Name: RoomGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1145352609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1145352608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fca91c7b6224c4496e58df7e91bd15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 1
+  RoomSize: 1
+  Room: {fileID: 168990, guid: 4ec7938a16fca9c4bbea59eab95fc4fb, type: 2}
+  Biomes:
+  - Spawnables:
+    - Asset:
+      - {fileID: 114560, guid: cc6fdac78f6b87c4dbcbacf6d65e0a2f, type: 2}
+      SpawnRules:
+      - Bottom
+      AverageAmount: 1
+--- !u!4 &1145352610
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1145352608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 75.17986, y: 48.26625, z: 84.73691}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!1 &1568177150 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 186192, guid: 9ff06143f28b43f4ab15a7263cd64c0f, type: 2}
@@ -489,7 +535,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1001 &2141114298
 Prefab:
   m_ObjectHideFlags: 0

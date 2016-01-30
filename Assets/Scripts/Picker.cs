@@ -16,6 +16,17 @@ public class Picker : MonoBehaviour {
     {
         Ray testRay = new Ray(transform.position, transform.forward);
         currentInteractHits = Physics.RaycastNonAlloc(testRay, pickupHits, RaycastLength);
+
+        for (int i = 0; i < currentInteractHits; i++)
+        {
+            var hitTransform = pickupHits[i].transform;
+            var po = hitTransform.GetComponent<Outlineable>();
+            if (po != null)
+            {
+                po.onMouseover();
+            }
+        }
+
         if (Input.GetButtonDown("Fire1"))
         {
             if (HasPickup)
