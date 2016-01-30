@@ -104,7 +104,6 @@ public class KnifeScan : MonoBehaviour {
                 Destroy(GetComponent<Rigidbody>());
                 Destroy(GetComponent<StickyObject>());
                 Destroy(GetComponent<Pickup>());
-                Destroy(GetComponent<Collider>());
                 IsAlive = false;
             }
 

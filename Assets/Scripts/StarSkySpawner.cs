@@ -18,7 +18,6 @@ public class StarSkySpawner : MonoBehaviour {
             go.transform.parent = this.transform;
             go.transform.position = transform.position + r * Radius;
         }
-	
 	}
 
     public void OnDrawGizmosSelected()
