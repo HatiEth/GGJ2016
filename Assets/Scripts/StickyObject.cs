@@ -6,6 +6,15 @@ public class StickyObject : MonoBehaviour {
     public bool IsPartOfGroup { get { return group != null; } }
     StickyGroup group = null;
 
+    void Start()
+    {
+        /*
+        if (GetComponent<StickyGroup>() != null) {
+            group = GetComponent<StickyGroup>();
+        }
+        */
+    }
+
     public void OnCollisionStay(Collision collision)
     {
         if (GetComponent<Pickup>() != null && GetComponent<Pickup>().IsPickedUp)
@@ -23,7 +32,8 @@ public class StickyObject : MonoBehaviour {
         {
             if (!IsPartOfGroup && !collision.gameObject.GetComponent<StickyObject>().IsPartOfGroup)
             {
-                CreateStickyGroup();
+                // Disabled for gameplay reasons
+                //CreateStickyGroup(); 
             }
             else if (!IsPartOfGroup)
             {
