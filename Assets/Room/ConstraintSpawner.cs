@@ -22,7 +22,6 @@ public class ConstraintSpawner : MonoBehaviour {
     {
         Gizmos.color = Color.red;
         Vector3 siz = transform.localScale;
-        siz = new Vector3(siz.x, siz.y, siz.z);
         Gizmos.DrawWireCube(transform.position, siz);
     }
 

@@ -21,6 +21,8 @@ public class RoomScript : MonoBehaviour {
     GameObject Ground;
     ConstraintSpawner spwn;
 
+    bool playerInside;
+
 	// Use this for initialization
 	void Start () {
         GenerateStructure();
@@ -90,6 +92,7 @@ public class RoomScript : MonoBehaviour {
     public void SetRoomDesc(RoomDescription v, GameObject BluePrint)
     {
         GameObject go = (GameObject)Instantiate(BluePrint);
+        go.transform.parent = transform;
         this.spwn = go.GetComponent<ConstraintSpawner>();            
         this.spwn.Desc = v;
         this.spwn.transform.position = this.transform.position;
@@ -111,6 +114,18 @@ public class RoomScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-	
-	}
+        Vector3 size = spwn.transform.localScale;
+        Vector3 roompos = spwn.transform.position;
+        Bounds b = new Bounds(roompos, size);
+        if (b.Contains(Camera.main.transform.position) && playerInside == false)
+        {
+            playerInside = true;
+            onPlayerEnter();
+        }
+    }
+
+    void onPlayerEnter()
+    {
+        Debug.Log("Player enter Room :" + spwn.transform.position.x / 40 + " " + spwn.transform.position.z / 40);
+    }
 }
