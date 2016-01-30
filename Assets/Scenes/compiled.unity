@@ -85,6 +85,48 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &521546845
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 499830, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -63.45336
+      objectReference: {fileID: 0}
+    - target: {fileID: 499830, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 14.772687
+      objectReference: {fileID: 0}
+    - target: {fileID: 499830, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -75.301315
+      objectReference: {fileID: 0}
+    - target: {fileID: 499830, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499830, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499830, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499830, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 499830, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1053409144
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,25 +158,73 @@ MonoBehaviour:
   RoomSize: 1
   Room: {fileID: 168990, guid: 4ec7938a16fca9c4bbea59eab95fc4fb, type: 2}
   Biomes:
-  - Spawnables: []
-  - Spawnables:
-    - Asset:
+  - Name: MainKinderzimmer
+    Spawnables: []
+    Clr: {fileID: 2100000, guid: c5d2ec53ad5e49b49a110580d4cbba3d, type: 2}
+  - Name: Wohnzimmer
+    Spawnables:
+    - Name: "Wandm\xF6bel"
+      Asset:
+      - {fileID: 122140, guid: eabc54554b509464f9e370181d82e90c, type: 2}
+      - {fileID: 147914, guid: e4308e742a5662d4188737f89acc5f97, type: 2}
+      - {fileID: 190900, guid: 79171d9223856f641870db0dd96534ff, type: 2}
+      - {fileID: 195108, guid: a9585fe694e629f4faaae36ca58cbdcf, type: 2}
       - {fileID: 114560, guid: cc6fdac78f6b87c4dbcbacf6d65e0a2f, type: 2}
       SpawnRules:
       - Side
-      - Fix
-      - MidHeigth
-      AverageAmount: 40
-    - Asset:
+      - Bottom
+      - Common
+      AverageAmount: 16
+    - Name: Spielzeug
+      Asset:
+      - {fileID: 150358, guid: f864e61e760525b4b95af8da91f313bc, type: 2}
+      - {fileID: 108956, guid: 42a9fa9a30c433d46af12799222db4fb, type: 2}
+      - {fileID: 167168, guid: a8e89f12044daea4a86774d8cfa7a707, type: 2}
+      - {fileID: 110866, guid: e0f219c0ead1af14c8600fd91cd886c6, type: 2}
+      - {fileID: 176848, guid: a3b4b597218425a4487f7a1c71b52477, type: 2}
+      - {fileID: 135172, guid: 0612548ec630b4244b84a5ce2b1e426d, type: 2}
+      - {fileID: 177486, guid: 4d4ca89aae70f6f48b6b16d6ea8c5d72, type: 2}
+      - {fileID: 127598, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+      SpawnRules:
+      - Bottom
+      - Common
+      - RandomOrientationZ
+      AverageAmount: 30
+    - Name: Tisch
+      Asset:
       - {fileID: 150358, guid: f864e61e760525b4b95af8da91f313bc, type: 2}
       SpawnRules:
       - Bottom
-      AverageAmount: 3
-    - Asset:
-      - {fileID: 177178, guid: 1890e6224e5372841b9a081211fbd415, type: 2}
+      - RandomOrientationZ
+      - Common
+      AverageAmount: 2
+    Clr: {fileID: 2100000, guid: d3540befeb160d549bb775d4ce23da90, type: 2}
+  - Name: Badezimmer
+    Spawnables:
+    - Name: Badezeug
+      Asset:
+      - {fileID: 176850, guid: cfec7e871c751314e939d6cb3331cbf1, type: 2}
+      - {fileID: 127598, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+      - {fileID: 107308, guid: f6f5faf2a775c4947b2f348e4dc08437, type: 2}
+      - {fileID: 135172, guid: 0612548ec630b4244b84a5ce2b1e426d, type: 2}
+      - {fileID: 156088, guid: 19abdb4236bb345478a46b591c5b4fff, type: 2}
       SpawnRules:
       - Bottom
-      AverageAmount: 1
+      - RandomOrientationZ
+      - Common
+      AverageAmount: 15
+    - Name: Wand
+      Asset:
+      - {fileID: 155910, guid: b70256f64e004b246880f4407c234a60, type: 2}
+      - {fileID: 166616, guid: e8c75cd673cde1246bf6cfb7cf00a747, type: 2}
+      - {fileID: 175718, guid: 63266abd59a24f34c9352d77c6a69a95, type: 2}
+      - {fileID: 122140, guid: eabc54554b509464f9e370181d82e90c, type: 2}
+      SpawnRules:
+      - Side
+      - Bottom
+      - Common
+      AverageAmount: 20
+    Clr: {fileID: 2100000, guid: 9324bce86a82cc049903caa3b166b501, type: 2}
   ConstraintSpawnerBluePrint: {fileID: 196376, guid: 87920f10973790a4ea4784c9f163e56d,
     type: 2}
 --- !u!4 &1053409146
@@ -265,7 +355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1001 &1661833949
 Prefab:
   m_ObjectHideFlags: 0
@@ -350,6 +440,18 @@ Prefab:
     - target: {fileID: 465574, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 419176, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10845500, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.674
+      objectReference: {fileID: 0}
+    - target: {fileID: 10845500, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}
+      propertyPath: m_DrawHalo
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f2ff266e36d8ec47a40e19594636634, type: 2}

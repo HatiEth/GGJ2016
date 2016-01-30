@@ -20,6 +20,7 @@ public class RoomScript : MonoBehaviour {
     const float DoorWidth = 5.0f;
     GameObject Ground;
     ConstraintSpawner spwn;
+    Material M;
 
     bool playerInside;
 
@@ -37,6 +38,7 @@ public class RoomScript : MonoBehaviour {
         Ground.transform.localScale = new Vector3(WallWidth, 1, WallWidth);
         Ground.name = "Ground";
         Ground.transform.parent = transform;
+        Ground.GetComponent<Renderer>().material = M;
 
         float WallDoorPos = ((WallWidth / 2) + DoorWidth) / 2;
 
@@ -89,10 +91,11 @@ public class RoomScript : MonoBehaviour {
         }
     }
 
-    public void SetRoomDesc(RoomDescription v, GameObject BluePrint)
+    public void SetRoomDesc(Biom v, GameObject BluePrint, Material M)
     {
         GameObject go = (GameObject)Instantiate(BluePrint);
         go.transform.parent = transform;
+        this.M = M;
         this.spwn = go.GetComponent<ConstraintSpawner>();            
         this.spwn.Desc = v;
         this.spwn.transform.position = this.transform.position;
@@ -104,12 +107,13 @@ public class RoomScript : MonoBehaviour {
 
     void AddWall(string Name, Vector3 Pos, Quaternion rot, Vector3 Scale)
     {
-        GameObject obj = GameObject.Instantiate(Ground);
+        GameObject obj = GameObject.Instantiate(Ground);        
         obj.transform.position = Pos + transform.position;
         obj.transform.rotation = rot;
         obj.transform.localScale = Scale;
         obj.name = Name;
         obj.transform.parent = transform;
+        obj.GetComponent<Renderer>().material = M;
     }
 
     // Update is called once per frame
