@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
+using System.Collections.Generic;
 
 public enum WallConfig
 {
@@ -19,18 +19,13 @@ public class RoomScript : MonoBehaviour {
     const int WallDistance = 20;
     const float DoorWidth = 5.0f;
     GameObject Ground;
-    RoomDescription Desc;
+    ConstraintSpawner spwn;
 
 	// Use this for initialization
 	void Start () {
         GenerateStructure();
-        
-        
-    }
-    
-    void GenerateContent()
-    {
-
+        spwn.GenerateContent();
+        Destroy(spwn.transform.parent.gameObject);
     }
 
     void GenerateStructure()
@@ -93,10 +88,16 @@ public class RoomScript : MonoBehaviour {
         }
     }
 
-    public void SetRoomDesc(RoomDescription v)
+    public void SetRoomDesc(RoomDescription v, GameObject BluePrint)
     {
-        Desc = v;
-        GenerateContent();
+        GameObject go = (GameObject)Instantiate(BluePrint);
+        this.spwn = go.GetComponent<ConstraintSpawner>();            
+        this.spwn.Desc = v;
+        this.spwn.transform.position = this.transform.position;
+        this.spwn.transform.localScale = this.transform.localScale;
+        go.transform.localScale = new Vector3(go.transform.localScale.x*39, go.transform.localScale.y * 10, go.transform.localScale.z*39);
+
+        go.transform.position += new Vector3(0,5,0);
     }
 
     void AddWall(string Name, Vector3 Pos, Quaternion rot, Vector3 Scale)
@@ -113,12 +114,4 @@ public class RoomScript : MonoBehaviour {
     void Update () {
 	
 	}
-
-    //void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Vector3 siz = transform.localScale * 2 * 20;
-    //    siz = new Vector3(siz.x,siz.y - 600.0f,siz.z);
-    //    Gizmos.DrawWireCube(transform.position, siz);
-    //}
 }

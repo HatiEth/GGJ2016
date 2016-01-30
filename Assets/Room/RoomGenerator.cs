@@ -11,6 +11,7 @@ public class RoomGenerator : MonoBehaviour {
     public GameObject Room;
     public List<RoomDescription> Biomes;
     List<int> RoomDescs;
+    public GameObject ConstraintSpawnerBluePrint;
 
     int[,] Rooms;
 	// Use this for initialization
@@ -34,11 +35,11 @@ public class RoomGenerator : MonoBehaviour {
 	
     void SpawnRooms()
     {
-
+        
         for (int x = 0; x < Rooms.GetLength(0); x++)
             for (int y = 0; y < Rooms.GetLength(0); y++)
             {
-                GameObject o = GameObject.Instantiate(Room,new Vector3(x*40,0,y*40),new Quaternion()) as GameObject;
+                GameObject o = GameObject.Instantiate(Room,new Vector3( (0.5f + x - Rooms.GetLength(0)/2.0f)*40.0f, 0, 40 * (0.5f + y-Rooms.GetLength(0) / 2.0f)), new Quaternion()) as GameObject;
                 RoomScript scr = o.GetComponent<RoomScript>();
                 scr.DoorEast = WallConfig.None;
                 scr.DoorSouth = WallConfig.None;
@@ -50,7 +51,12 @@ public class RoomGenerator : MonoBehaviour {
 
                 scr.DoorNorth = north;
                 scr.DoorWest = west;
-                scr.SetRoomDesc(Biomes[RoomDescs[Rooms[x,y]]]);
+                if ((Rooms.GetLength(0) / 2 ) == x && (Rooms.GetLength(0) / 2 ) == y)
+                {
+                    scr.SetRoomDesc(Biomes[0], ConstraintSpawnerBluePrint);
+                }
+                else
+                    scr.SetRoomDesc(Biomes[RoomDescs[Rooms[x,y]]],ConstraintSpawnerBluePrint);
                 
             }
     }
@@ -99,9 +105,9 @@ public class RoomGenerator : MonoBehaviour {
         }
 
         RoomDescs = new List<int>();
-        for(int i = 0;i < RoomDescs.Count;i++)
+        for(int i = 0;i < Counter; i++)
         {
-            int nr = (int)(Random.value * Biomes.Count);
+            int nr = (int)(Random.value * (Biomes.Count-1)) +1;
             RoomDescs.Add(nr);
         }
     }
