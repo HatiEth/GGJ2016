@@ -28,7 +28,7 @@ GameObject:
   - 54: {fileID: 5422346}
   - 65: {fileID: 6589540}
   m_Layer: 0
-  m_Name: "Klavierw\xFCrfel"
+  m_Name: "Klavierwu\u0308rfel"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
