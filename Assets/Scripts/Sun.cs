@@ -16,7 +16,10 @@ public class Sun : MonoBehaviour {
     float ambienIday = 0.9f;
     float ambienInight = 0.2f;
 
-    float fogday = 0.08f;
+    float reflectday = 0.5f;
+    float reflectnight = 0.0f;
+
+    float fogday = 0.00f;
     float fognight = 0.5f;
     public float fogreduction=0f;
 
@@ -27,14 +30,19 @@ public class Sun : MonoBehaviour {
         l = GetComponent<Light>();
         l.color = dayColor;
         sun = this;
+        l.shadowStrength = 0.6f;
         Camera.main.GetComponent<SunShafts>().sunColor = l.color;
-        if (!Camera.main.GetComponent<SunShafts>())
+        if (Camera.main.GetComponent<SunShafts>()==null)
             Camera.main.gameObject.AddComponent<SunShafts>();
+        if (!Camera.main.GetComponent<SunShafts>().isActiveAndEnabled)
+            Camera.main.GetComponent<SunShafts>().enabled=true;
         Camera.main.GetComponent<SunShafts>().sunTransform = l.transform;
 
         RenderSettings.fog = true;
         RenderSettings.fogColor = Color.black;
         RenderSettings.fogMode = FogMode.ExponentialSquared;
+
+        RenderSettings.reflectionIntensity = reflectday;
     }
 	
 	// Update is called once per frame
@@ -54,6 +62,7 @@ public class Sun : MonoBehaviour {
         if (time.gametime > dawntime && time.gametime < dawnend)
         {
             l.color = Color.Lerp(dayColor, dawnColor, (time.gametime - dawntime) / (dawnend - dawntime));
+            RenderSettings.reflectionIntensity = Mathf.Lerp(reflectday, reflectnight, (time.gametime - dawntime) / (dawnend - dawntime));
             Camera.main.GetComponent<SunShafts>().sunColor = l.color;
         }
     }
