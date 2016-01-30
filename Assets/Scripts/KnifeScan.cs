@@ -19,6 +19,10 @@ public class KnifeScan : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        if (Player == null)
+        {
+            Player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         StartCoroutine(SearchForTarget());
 
     }
@@ -30,7 +34,7 @@ public class KnifeScan : MonoBehaviour {
         {
             var old = gameObject.layer;
             gameObject.layer = 2;
-            bool hasHit = Physics.Raycast(transform.position, Player.position - transform.position, out hitInfo, Mathf.Infinity, ~Physics.IgnoreRaycastLayer);
+            bool hasHit = Physics.Raycast(transform.position, Player.position - transform.position, out hitInfo, 20f, ~Physics.IgnoreRaycastLayer);
             if (hasHit && hitInfo.collider.CompareTag("Player"))
             {
                 if (Random.Range(0, 100) < StartChance)
