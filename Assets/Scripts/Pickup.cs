@@ -6,7 +6,7 @@ public class Pickup : MonoBehaviour, Interactable, Outlineable {
     public bool IsPickedUp;
     private bool mouseover;
 
-
+    public bool OnceWasPickedUp = false;
 
     public void Interact(Picker picker)
     {
@@ -20,6 +20,7 @@ public class Pickup : MonoBehaviour, Interactable, Outlineable {
             transform.gameObject.layer = LayerMask.NameToLayer("PickedUp");
 
             this.IsPickedUp = true;
+            this.OnceWasPickedUp = true;
         }
     }
 

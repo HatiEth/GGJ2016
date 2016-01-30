@@ -97,6 +97,7 @@ GameObject:
   - 65: {fileID: 6532076}
   - 65: {fileID: 6565914}
   - 114: {fileID: 11447036}
+  - 114: {fileID: 11482026}
   m_Layer: 0
   m_Name: Polizei_motorrad
   m_TagString: Untagged
@@ -471,6 +472,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d84990ea26b5784894989e7dbf70662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11482026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9989eae5379c4d4bae6748cd28a5476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPickedUp: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

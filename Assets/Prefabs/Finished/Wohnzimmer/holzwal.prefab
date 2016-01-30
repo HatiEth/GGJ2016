@@ -14,6 +14,7 @@ GameObject:
   - 65: {fileID: 6583638}
   - 65: {fileID: 6560058}
   - 114: {fileID: 11447604}
+  - 114: {fileID: 11423100}
   m_Layer: 0
   m_Name: holzwal
   m_TagString: Untagged
@@ -105,6 +106,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.07028021, y: 0.020063052, z: 0.0061533516}
   m_Center: {x: 0.005836128, y: 0.010425167, z: 0.00001440163}
+--- !u!114 &11423100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9989eae5379c4d4bae6748cd28a5476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPickedUp: 0
 --- !u!114 &11447604
 MonoBehaviour:
   m_ObjectHideFlags: 1
