@@ -97,7 +97,7 @@ GameObject:
   - 54: {fileID: 5439508}
   - 65: {fileID: 6589302}
   m_Layer: 0
-  m_Name: Piano
+  m_Name: Piano_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
