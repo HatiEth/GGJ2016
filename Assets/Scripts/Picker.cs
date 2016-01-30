@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Picker : MonoBehaviour {
 
@@ -12,10 +13,6 @@ public class Picker : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (HasPickup)
-        {
-        }
-
         if (Input.GetButtonDown("Fire1"))
         {
             if (HasPickup)
@@ -39,13 +36,25 @@ public class Picker : MonoBehaviour {
             for (int i = 0; i < results; ++i)
             {
                 var hitTransform = pickupHits[i].transform;
-                if (hitTransform.GetComponent<PickUpObject>() != null)
+                var po = hitTransform.GetComponent<PickUpObject>();
+                if (po != null)
                 {
                     hitTransform.parent = PickupAnchor.transform;
                     hitTransform.localPosition = Vector3.zero;
 
                     hitTransform.GetComponent<Rigidbody>().useGravity = false;
                     hitTransform.GetComponent<Rigidbody>().isKinematic = true;
+                    hitTransform.gameObject.layer = LayerMask.NameToLayer("PickedUp");
+
+                    po.isPickedUp = true;
+
+                    if (hitTransform.GetComponent<FixedJoint>() != null)
+                    {
+                        //GameObject.Destroy(hitTransform.GetComponent<FixedJoint>());
+                        // Detach all fixed joints and detach from all fixed joints attached on
+                        po.DisconnectAllStickies();
+                    }
+
                     break;
                 }
 
@@ -55,17 +64,25 @@ public class Picker : MonoBehaviour {
 
     void DropObject()
     {
+        List<Transform> Children = new List<Transform>(PickupAnchor.childCount);
         for (int i = 0; i < PickupAnchor.childCount; ++i)
         {
-            var rigidbody = PickupAnchor.GetChild(i).GetComponent<Rigidbody>();
+            Children.Add(PickupAnchor.GetChild(i));
+        }
+
+        PickupAnchor.transform.DetachChildren();
+        for (int i = 0; i < Children.Count; ++i)
+        {
+            var rigidbody = Children[i].GetComponent<Rigidbody>();
             if (rigidbody != null)
             {
                 rigidbody.useGravity = true;
                 rigidbody.isKinematic = false;
+                rigidbody.gameObject.layer = 0;
             }
-        }
 
-        PickupAnchor.transform.DetachChildren();
+            Children[i].GetComponent<PickUpObject>().isPickedUp = false;
+        }
     }
 
     public void OnDrawGizmos()
