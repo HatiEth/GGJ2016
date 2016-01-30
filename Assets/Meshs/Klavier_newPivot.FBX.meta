@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: b858855c8b0e4dd40a3f1851a851a6f2
+timeCreated: 1454128198
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Klavier 1
+    100002: //RootNode
+    100004: TasteSchwarz002
+    100006: TasteSchwarz003
+    100008: TasteSchwarz004
+    100010: TasteSchwarz005
+    100012: TasteSchwarz006
+    100014: TasteSchwarz007
+    100016: TasteSchwarz01
+    100018: TasteWeiss002
+    100020: TasteWeiss003
+    100022: TasteWeiss004
+    100024: TasteWeiss005
+    100026: TasteWeiss006
+    100028: TasteWeiss007
+    100030: TasteWeiss008
+    100032: TasteWeiss009
+    100034: TasteWeiss01
+    100036: TasteWeiss010
+    100038: TasteWeiss011
+    400000: Klavier 1
+    400002: //RootNode
+    400004: TasteSchwarz002
+    400006: TasteSchwarz003
+    400008: TasteSchwarz004
+    400010: TasteSchwarz005
+    400012: TasteSchwarz006
+    400014: TasteSchwarz007
+    400016: TasteSchwarz01
+    400018: TasteWeiss002
+    400020: TasteWeiss003
+    400022: TasteWeiss004
+    400024: TasteWeiss005
+    400026: TasteWeiss006
+    400028: TasteWeiss007
+    400030: TasteWeiss008
+    400032: TasteWeiss009
+    400034: TasteWeiss01
+    400036: TasteWeiss010
+    400038: TasteWeiss011
+    2300000: Klavier 1
+    2300002: TasteSchwarz002
+    2300004: TasteSchwarz003
+    2300006: TasteSchwarz004
+    2300008: TasteSchwarz005
+    2300010: TasteSchwarz006
+    2300012: TasteSchwarz007
+    2300014: TasteSchwarz01
+    2300016: TasteWeiss002
+    2300018: TasteWeiss003
+    2300020: TasteWeiss004
+    2300022: TasteWeiss005
+    2300024: TasteWeiss006
+    2300026: TasteWeiss007
+    2300028: TasteWeiss008
+    2300030: TasteWeiss009
+    2300032: TasteWeiss01
+    2300034: TasteWeiss010
+    2300036: TasteWeiss011
+    3300000: Klavier 1
+    3300002: TasteSchwarz002
+    3300004: TasteSchwarz003
+    3300006: TasteSchwarz004
+    3300008: TasteSchwarz005
+    3300010: TasteSchwarz006
+    3300012: TasteSchwarz007
+    3300014: TasteSchwarz01
+    3300016: TasteWeiss002
+    3300018: TasteWeiss003
+    3300020: TasteWeiss004
+    3300022: TasteWeiss005
+    3300024: TasteWeiss006
+    3300026: TasteWeiss007
+    3300028: TasteWeiss008
+    3300030: TasteWeiss009
+    3300032: TasteWeiss01
+    3300034: TasteWeiss010
+    3300036: TasteWeiss011
+    4300000: TasteSchwarz01
+    4300002: TasteSchwarz004
+    4300004: TasteSchwarz002
+    4300006: TasteWeiss002
+    4300008: TasteWeiss01
+    4300010: Klavier
+    4300012: TasteWeiss003
+    4300014: TasteWeiss010
+    4300016: TasteWeiss011
+    4300018: TasteSchwarz003
+    4300020: TasteWeiss006
+    4300022: TasteWeiss007
+    4300024: TasteWeiss004
+    4300026: TasteWeiss005
+    4300028: TasteWeiss008
+    4300030: TasteWeiss009
+    4300032: TasteSchwarz005
+    4300034: TasteSchwarz006
+    4300036: TasteSchwarz007
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
