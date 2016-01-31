@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Fenster
-  m_Shader: {fileID: 4800000, guid: b21f65899cb009e42b78bfef49b139eb, type: 3}
+  m_Shader: {fileID: 4800000, guid: ef449001d4b528f44a7242ade3abf169, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: 2000
@@ -146,7 +146,7 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 1.081, g: 1.081, b: 1.081, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 0}
       data:
         first:
           name: _Color
@@ -158,4 +158,4 @@ Material:
       data:
         first:
           name: _OutlineColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}

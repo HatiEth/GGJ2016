@@ -9,7 +9,18 @@ public class Picker : MonoBehaviour {
     RaycastHit[] pickupHits = new RaycastHit[20];
     int currentInteractHits;
 
+    [SerializeField]
+    private float MaxPickUpDistance = 5f;
+    [SerializeField]
+    private float MinPickUpDistance = 2.5f;
+
     public bool HasPickup { get { return PickupAnchor.transform.childCount > 0; } }
+
+
+    void Start()
+    {
+        PickupAnchor.transform.localPosition = PickupAnchor.transform.localPosition.normalized * MinPickUpDistance;
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,6 +49,16 @@ public class Picker : MonoBehaviour {
                 InteractWithObjectInFront();
             }
         }
+
+        if (HasPickup && Input.mouseScrollDelta.y != 0f)
+        {
+            float currentDistance = PickupAnchor.transform.localPosition.magnitude;
+            currentDistance += Input.mouseScrollDelta.y / 10f;
+            float dist = Mathf.Clamp(currentDistance, MinPickUpDistance, MaxPickUpDistance);
+
+            PickupAnchor.transform.localPosition = PickupAnchor.transform.localPosition.normalized * dist;
+        }
+
         if (Input.GetButtonDown("Fire2") && HasPickup)
         {
             StartCoroutine(RotatePickup());
