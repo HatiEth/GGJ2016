@@ -27,7 +27,7 @@ public class RoomScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         GenerateStructure();
-        spwn.GenerateContent();
+        StartCoroutine(spwn.GenerateContent());
     }
 
     void GenerateStructure()
