@@ -38,7 +38,8 @@ public class ConstraintSpawner : MonoBehaviour {
         return Cache[G];
     }
 
-    public void GenerateContent()
+    //public void GenerateContent()
+    public IEnumerator GenerateContent()
     {
         for (int i = 0; i < Desc.Spawnables.Count; i++)
         {
@@ -65,7 +66,7 @@ public class ConstraintSpawner : MonoBehaviour {
                         o.GetComponent<Rigidbody>().isKinematic = true;
                 }
 
-
+                yield return null;
 
             }
         }
