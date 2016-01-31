@@ -16,5 +16,6 @@ public class SchalterToggle : MonoBehaviour, Interactable {
     {
         IsActive = !IsActive;
         anim.SetBool("IsActive", IsActive);
+        Daytimecontrol.timeControl.reset();
     }
 }

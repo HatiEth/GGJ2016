@@ -24,7 +24,7 @@ public class SideConstraint : SpawnConstraint
         if (float.IsInfinity(mindist)) return false;
         if (Physics.CheckBox(position, halfext,Orientation)) return false;
         position = position + mindist * Direction;
-        rotation = Orientation;
+        rotation *= Orientation;
         return true;
     }
 }

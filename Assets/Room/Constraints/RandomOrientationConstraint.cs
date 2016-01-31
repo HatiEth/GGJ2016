@@ -13,7 +13,7 @@ public class RandomOrientationConstraint : SpawnConstraint
     {
         if (orient == "Z")
         {
-            rotation = Quaternion.Euler(0, Random.value * 360.0f, 0);
+            rotation *= Quaternion.Euler(0, Random.value * 360.0f, 0);
         }
         Vector3 halfext = asset.GetComponent<Collider>().bounds.extents / 2;
         if (Physics.CheckBox(position, halfext, rotation)) return false;

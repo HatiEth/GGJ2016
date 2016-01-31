@@ -28,13 +28,18 @@ public class ConstraintSpawner : MonoBehaviour {
     static Dictionary<GameObject, GameObject> Cache;
     static GameObject GetCache(GameObject G)
     {
+        if (G == null)
+            throw new System.Exception("Constraint Spawner null object requested");
         if (Cache == null) Cache = new Dictionary<GameObject, GameObject>();
         if (!Cache.ContainsKey(G))
             Cache[G] = (GameObject)Instantiate(G, new Vector3(0, -100, 0), new Quaternion());
+        if (!Cache.ContainsKey(G))
+            throw new System.Exception(G.ToString() + " Constraint spawner could not spawn blueprint");
         return Cache[G];
     }
 
-    public void GenerateContent()
+    //public void GenerateContent()
+    public IEnumerator GenerateContent()
     {
         for (int i = 0; i < Desc.Spawnables.Count; i++)
         {
@@ -45,7 +50,7 @@ public class ConstraintSpawner : MonoBehaviour {
 
                 Bounds Area = new Bounds(transform.position, transform.localScale);
                 Vector3 Position = Area.min + new Vector3((Area.max.x - Area.min.x) * UnityEngine.Random.value, (Area.max.y - Area.min.y) * UnityEngine.Random.value, (Area.max.z - Area.min.z) * UnityEngine.Random.value);
-                Quaternion Rotation = new Quaternion();
+                Quaternion Rotation = transform.rotation;
                 bool no = false;
                 SpawnConstraintOptions Options = new SpawnConstraintOptions();
                 Options.SpawnArea = Area;
@@ -61,7 +66,7 @@ public class ConstraintSpawner : MonoBehaviour {
                         o.GetComponent<Rigidbody>().isKinematic = true;
                 }
 
-
+                yield return null;
 
             }
         }
