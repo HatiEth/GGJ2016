@@ -30,7 +30,7 @@ GameObject:
   - 114: {fileID: 11455484}
   - 114: {fileID: 11440414}
   m_Layer: 0
-  m_Name: "Klavierwu\u0308rfel"
+  m_Name: "Klavierw\xFCrfel"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,11 +195,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnAtStart: 1
   Desc:
+    Name: 
     Spawnables:
-    - Asset:
+    - Name: 
+      Asset:
       - {fileID: 114560, guid: cc6fdac78f6b87c4dbcbacf6d65e0a2f, type: 2}
       SpawnRules: []
       AverageAmount: 1
+    Clr: {fileID: 0}
 --- !u!114 &11440414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPickedUp: 0
+  OnceWasPickedUp: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
