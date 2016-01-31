@@ -52,7 +52,7 @@ GameObject:
   - 114: {fileID: 11433518}
   - 114: {fileID: 11414766}
   m_Layer: 0
-  m_Name: "Regal_Ha\u0308ngen01"
+  m_Name: "Regal_H\xE4ngen01"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPickedUp: 0
+  OnceWasPickedUp: 0
 --- !u!114 &11471404
 MonoBehaviour:
   m_ObjectHideFlags: 1
