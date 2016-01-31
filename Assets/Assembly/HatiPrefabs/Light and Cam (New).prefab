@@ -560,6 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RaycastLength: 2.5
   PickupAnchor: {fileID: 488802}
+  MainMenu: {fileID: 107090, guid: fc8453ce220d46a4085de9401c29a83b, type: 2}
   MaxPickUpDistance: 5
   MinPickUpDistance: 2.5
 --- !u!114 &11408112

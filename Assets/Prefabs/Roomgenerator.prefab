@@ -110,7 +110,7 @@ MonoBehaviour:
       SpawnRules:
       - Bottom
       - Side
-      AverageAmount: 2
+      AverageAmount: 3
     - Name: Badezeug
       Asset:
       - {fileID: 176850, guid: cfec7e871c751314e939d6cb3331cbf1, type: 2}

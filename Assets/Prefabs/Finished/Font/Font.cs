@@ -7,7 +7,7 @@ public class Font : MonoBehaviour {
     public List<GameObject> ObjectFont;
     public string Text;
     public string Target;
-    const float LetterDistance = 0.6f;
+    public const float LetterDistance = 0.8f;
 
     public List<GameObject> GetObjs(string s)
     {
