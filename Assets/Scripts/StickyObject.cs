@@ -19,8 +19,6 @@ public class StickyObject : MonoBehaviour {
     {
         if (GetComponent<Pickup>() != null && GetComponent<Pickup>().IsPickedUp)
             return;
-        if (GetComponent<Pickup>() != null && !GetComponent<Pickup>().OnceWasPickedUp)
-            return;
 
         if (collision.gameObject.GetComponent<StickyGroup>() != null)
         {
