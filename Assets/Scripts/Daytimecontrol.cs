@@ -23,7 +23,7 @@ public class Daytimecontrol : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        gametime = startoffset + Time.timeSinceLevelLoad * speed; //FIXME: *10 for debug speed
 	}
 
     public void reset()

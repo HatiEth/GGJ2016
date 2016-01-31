@@ -141,15 +141,16 @@ public class Picker : MonoBehaviour {
     IEnumerator RotatePickup()
     {
         Vector3 mp = Input.mousePosition;
-        while (!Input.GetButtonUp("Fire2"))
+        while (!Input.GetButtonUp("Fire2")&&HasPickup)
         {
-            yield return null;
             Vector3 mdelta = Input.mousePosition - mp;
             float yRot = Input.GetAxis("Mouse X");
             float xRot = Input.GetAxis("Mouse Y");
 
             PickupAnchor.GetChild(0).localRotation *= Quaternion.Euler (0f, 0f, yRot);
             PickupAnchor.localRotation *= Quaternion.Euler (-xRot, 0f, 0f);
+            yield return null;
+            
         }
     }
 

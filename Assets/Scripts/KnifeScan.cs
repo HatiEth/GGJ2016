@@ -62,7 +62,8 @@ public class KnifeScan : MonoBehaviour {
         var rigidbody = this.GetComponent<Rigidbody>();
         if (rigidbody == null) yield break;
         rigidbody.isKinematic = true;
-        
+        rigidbody.useGravity = false;
+
 
         while (Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.position - transform.position)) > 3f)
         {
@@ -105,7 +106,9 @@ public class KnifeScan : MonoBehaviour {
             if (collision.gameObject.CompareTag("Player") || (collision.transform.GetComponent<StickyObject>() == null && collision.transform.GetComponent<StickyGroup>() == null))
             {
                 transform.parent = collision.transform;
-                Destroy(GetComponent<Rigidbody>());
+                //Destroy(GetComponent<Rigidbody>());
+                GetComponent<Rigidbody>().useGravity = true;
+                GetComponent<Rigidbody>().isKinematic = false;
                 Destroy(GetComponent<StickyObject>());
                 Destroy(GetComponent<Pickup>());
                 IsAlive = false;
@@ -121,6 +124,8 @@ public class KnifeScan : MonoBehaviour {
         {
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             IsAlive = false;
+            GetComponent<Rigidbody>().useGravity = true;
+            GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }
