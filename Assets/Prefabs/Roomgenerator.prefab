@@ -69,6 +69,14 @@ MonoBehaviour:
       - Bottom
       - Common
       AverageAmount: 16
+    - Name: Tisch
+      Asset:
+      - {fileID: 150358, guid: f864e61e760525b4b95af8da91f313bc, type: 2}
+      SpawnRules:
+      - Bottom
+      - RandomOrientationZ
+      - Common
+      AverageAmount: 4
     - Name: Spielzeug
       Asset:
       - {fileID: 110430, guid: f1427e36360ae064ab6059c8fabd150b, type: 2}
@@ -93,17 +101,16 @@ MonoBehaviour:
       - Common
       - RandomOrientationZ
       AverageAmount: 30
-    - Name: Tisch
-      Asset:
-      - {fileID: 150358, guid: f864e61e760525b4b95af8da91f313bc, type: 2}
-      SpawnRules:
-      - Bottom
-      - RandomOrientationZ
-      - Common
-      AverageAmount: 4
     Clr: {fileID: 2100000, guid: d3540befeb160d549bb775d4ce23da90, type: 2}
   - Name: Badezimmer
     Spawnables:
+    - Name: FrozenThrone
+      Asset:
+      - {fileID: 155910, guid: b70256f64e004b246880f4407c234a60, type: 2}
+      SpawnRules:
+      - Bottom
+      - Side
+      AverageAmount: 2
     - Name: Badezeug
       Asset:
       - {fileID: 176850, guid: cfec7e871c751314e939d6cb3331cbf1, type: 2}
@@ -111,23 +118,21 @@ MonoBehaviour:
       - {fileID: 107308, guid: f6f5faf2a775c4947b2f348e4dc08437, type: 2}
       - {fileID: 193956, guid: bee842d65b4a4c847a01db694fedf8f8, type: 2}
       - {fileID: 108956, guid: 42a9fa9a30c433d46af12799222db4fb, type: 2}
-      - {fileID: 135172, guid: 0612548ec630b4244b84a5ce2b1e426d, type: 2}
       SpawnRules:
       - RandomOrientationZ
       - Bottom
       - Common
-      AverageAmount: 15
+      AverageAmount: 12
     - Name: Wand
       Asset:
-      - {fileID: 155910, guid: b70256f64e004b246880f4407c234a60, type: 2}
+      - {fileID: 122140, guid: eabc54554b509464f9e370181d82e90c, type: 2}
       - {fileID: 166616, guid: e8c75cd673cde1246bf6cfb7cf00a747, type: 2}
       - {fileID: 175718, guid: 63266abd59a24f34c9352d77c6a69a95, type: 2}
-      - {fileID: 122140, guid: eabc54554b509464f9e370181d82e90c, type: 2}
       SpawnRules:
-      - Side
       - Bottom
+      - Side
       - Common
-      AverageAmount: 10
+      AverageAmount: 15
     Clr: {fileID: 2100000, guid: 9324bce86a82cc049903caa3b166b501, type: 2}
   - Name: HobbyRaum
     Spawnables:
