@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &115096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 401226}
+  - 114: {fileID: 11463296}
+  m_Layer: 0
+  m_Name: RitualKreis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &401226
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -6.9, z: 0}
+  m_LocalScale: {x: 30.0774, y: 1, z: 30.05499}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11463296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5a8e30abda1d742aedb7c6dd6c7511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnAtStart: 1
+  Desc:
+    Name: 
+    Spawnables:
+    - Name: Teufel
+      Asset:
+      - {fileID: 110430, guid: f1427e36360ae064ab6059c8fabd150b, type: 2}
+      - {fileID: 177486, guid: 4d4ca89aae70f6f48b6b16d6ea8c5d72, type: 2}
+      SpawnRules:
+      - Circular
+      - OrientationToCenter
+      - Bottom
+      AverageAmount: 90
+    Clr: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Desc.Spawnables.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Desc.Spawnables.Array.data[0].Asset.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Desc.Spawnables.Array.data[0].SpawnRules.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Desc.Spawnables.Array.data[0].Name
+      value: Teufel
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Desc.Spawnables.Array.data[0].Asset.Array.data[0]
+      value: 
+      objectReference: {fileID: 110430, guid: f1427e36360ae064ab6059c8fabd150b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Desc.Spawnables.Array.data[0].Asset.Array.data[1]
+      value: 
+      objectReference: {fileID: 177486, guid: 4d4ca89aae70f6f48b6b16d6ea8c5d72, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Desc.Spawnables.Array.data[0].SpawnRules.Array.data[0]
+      value: Circular
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Desc.Spawnables.Array.data[0].SpawnRules.Array.data[1]
+      value: OrientationToCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Desc.Spawnables.Array.data[0].SpawnRules.Array.data[2]
+      value: Bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Desc.Spawnables.Array.data[0].AverageAmount
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: SpawnAtStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 30.0774
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: 30.05499
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 115096}
+  m_IsPrefabParent: 1

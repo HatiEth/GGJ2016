@@ -48,8 +48,6 @@ public class Sun : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Daytimecontrol time = transform.parent.GetComponent<Daytimecontrol>();
-        if (time.gametime > 60 * 60 * 24)
-            return; //there is no HOPE
         transform.rotation=Quaternion.Euler(start+time.gametime*new Vector3(-360f/(60f*60f*24f),0,0));
 
         LightColorControl(time);
@@ -84,5 +82,22 @@ public class Sun : MonoBehaviour {
         }
 
 
+    }
+
+    public void reStart()
+    {
+        l.shadowStrength = 0.6f;
+        l.color = dayColor;
+        Camera.main.GetComponent<SunShafts>().sunColor = l.color;
+
+        RenderSettings.fog = true;
+        RenderSettings.fogColor = Color.black;
+        RenderSettings.fogMode = FogMode.ExponentialSquared;
+        RenderSettings.fogDensity = fogday;
+
+        RenderSettings.ambientIntensity = ambienIday;
+        RenderSettings.ambientLight = dayColor;
+
+        RenderSettings.reflectionIntensity = reflectday;
     }
 }
