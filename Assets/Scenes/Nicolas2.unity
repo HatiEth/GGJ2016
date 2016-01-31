@@ -201,6 +201,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 427474477}
     m_Modifications:
+    - target: {fileID: 11401774, guid: 95e7b3d13aee32e47b7f41a06770008a, type: 2}
+      propertyPath: Biomes.Array.data[3].Spawnables.Array.data[2].Asset.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 472128, guid: 95e7b3d13aee32e47b7f41a06770008a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.88000107
@@ -232,10 +236,6 @@ Prefab:
     - target: {fileID: 472128, guid: 95e7b3d13aee32e47b7f41a06770008a, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11401774, guid: 95e7b3d13aee32e47b7f41a06770008a, type: 2}
-      propertyPath: Biomes.Array.data[2].Spawnables.Array.data[0].AverageAmount
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95e7b3d13aee32e47b7f41a06770008a, type: 2}

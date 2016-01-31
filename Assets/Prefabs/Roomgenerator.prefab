@@ -81,7 +81,7 @@ MonoBehaviour:
       Asset:
       - {fileID: 110430, guid: f1427e36360ae064ab6059c8fabd150b, type: 2}
       - {fileID: 108956, guid: 42a9fa9a30c433d46af12799222db4fb, type: 2}
-      - {fileID: 167168, guid: a8e89f12044daea4a86774d8cfa7a707, type: 2}
+      - {fileID: 167168, guid: 40c0e65ab834840a59f1903b69100749, type: 2}
       - {fileID: 170594, guid: adaa0d9b5b125fe42bb3632857835c58, type: 2}
       - {fileID: 138108, guid: c49e95980915bdd408a3d1921d6bff52, type: 2}
       - {fileID: 153300, guid: 14d1a23fb0d68c04e8a075adeb980f83, type: 2}
@@ -96,6 +96,7 @@ MonoBehaviour:
       - {fileID: 113684, guid: e5109ebcc1746e042b62e59733d5c079, type: 2}
       - {fileID: 156298, guid: 5ff968c47e21e1644b5bf921c1b1fb0a, type: 2}
       - {fileID: 177486, guid: 4d4ca89aae70f6f48b6b16d6ea8c5d72, type: 2}
+      - {fileID: 142090, guid: a578dd0c03af313488872e771de689e4, type: 2}
       SpawnRules:
       - Bottom
       - Common
@@ -170,7 +171,7 @@ MonoBehaviour:
       - {fileID: 110836, guid: c58ae64a38d72594ab2c481ab83c379a, type: 2}
       - {fileID: 113684, guid: e5109ebcc1746e042b62e59733d5c079, type: 2}
       - {fileID: 156298, guid: 5ff968c47e21e1644b5bf921c1b1fb0a, type: 2}
-      - {fileID: 167168, guid: a8e89f12044daea4a86774d8cfa7a707, type: 2}
+      - {fileID: 0}
       SpawnRules:
       - RandomOrientationZ
       - Bottom

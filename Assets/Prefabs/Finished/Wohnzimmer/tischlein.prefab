@@ -581,7 +581,7 @@ MonoBehaviour:
     - Name: Spielzeug
       Asset:
       - {fileID: 108956, guid: 42a9fa9a30c433d46af12799222db4fb, type: 2}
-      - {fileID: 167168, guid: a8e89f12044daea4a86774d8cfa7a707, type: 2}
+      - {fileID: 167168, guid: 40c0e65ab834840a59f1903b69100749, type: 2}
       - {fileID: 176848, guid: a3b4b597218425a4487f7a1c71b52477, type: 2}
       - {fileID: 135172, guid: 0612548ec630b4244b84a5ce2b1e426d, type: 2}
       - {fileID: 110866, guid: e0f219c0ead1af14c8600fd91cd886c6, type: 2}
@@ -663,7 +663,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: Desc.Spawnables.Array.data[0].Asset.Array.data[1]
       value: 
-      objectReference: {fileID: 192304, guid: c1ea45f69b6fded4d8e782366e0d50f4, type: 2}
+      objectReference: {fileID: 167168, guid: 40c0e65ab834840a59f1903b69100749, type: 2}
     - target: {fileID: 0}
       propertyPath: Desc.Spawnables.Array.data[0].Asset.Array.data[2]
       value: 
