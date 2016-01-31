@@ -145,7 +145,7 @@ MonoBehaviour:
   transitionToSnapshotData:
     _snapshot: 
     _timeToReach: 0
-  _eventName: _UnSet_
+  _eventName: Bee
   _eventAction: 0
   _trigger: 0
   _eventValue: 
@@ -153,7 +153,7 @@ MonoBehaviour:
   _eventParameterName: 
   _delay: 0
   _probability: 100
-  _eventTriggerType: 0
+  _eventTriggerType: 5
   _ignoreGameObject: 0
   _addToQueue: 0
   _min: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   _dspType: 0
   _timeToTarget: 0
   _curve: 0.5
-  _parentGameObject: {fileID: 108956}
+  _parentGameObject: {fileID: 0}
   _useEventID: 0
 --- !u!135 &13556640
 SphereCollider:
@@ -185,6 +185,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _eventName
+      value: Bee
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _parentGameObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _eventTriggerType
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
