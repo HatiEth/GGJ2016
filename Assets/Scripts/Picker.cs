@@ -6,6 +6,7 @@ public class Picker : MonoBehaviour {
 
     public float RaycastLength = 10f;
     public Transform PickupAnchor;
+    public GameObject MainMenu;
     RaycastHit[] pickupHits = new RaycastHit[20];
     int currentInteractHits;
 
@@ -13,6 +14,9 @@ public class Picker : MonoBehaviour {
     private float MaxPickUpDistance = 5f;
     [SerializeField]
     private float MinPickUpDistance = 2.5f;
+
+    bool HasMainMenu = false;
+    GameObject MainMenuInst;
 
     public bool HasPickup { get { return PickupAnchor.transform.childCount > 0; } }
 
@@ -25,6 +29,12 @@ public class Picker : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (HasMainMenu)
+            if ((MainMenuInst.transform.position - transform.position).magnitude > 6)
+        {
+            { Destroy(MainMenuInst); HasMainMenu = false; }
+        }
+
         Ray testRay = new Ray(transform.position, transform.forward);
         currentInteractHits = Physics.RaycastNonAlloc(testRay, pickupHits, RaycastLength);
 
@@ -36,6 +46,19 @@ public class Picker : MonoBehaviour {
             {
                 po.onMouseover();
             }
+        }
+
+        if (Input.GetKeyDown("escape"))
+        {
+            if (HasMainMenu)
+            {
+                Destroy(MainMenuInst);
+                HasMainMenu = false;
+            }
+            
+            Vector3 v = transform.rotation * new Vector3(0, 0, 0);
+            MainMenuInst = (GameObject)Instantiate(MainMenu, transform.position + v, transform.rotation);
+            HasMainMenu = true;
         }
 
         if (Input.GetButtonDown("Fire1"))
@@ -72,12 +95,22 @@ public class Picker : MonoBehaviour {
             for (int i = 0; i < currentInteractHits; ++i)
             {
                 var hitTransform = pickupHits[i].transform;
+
+
+                var p2 = hitTransform.GetComponent<Klickable>();
+                if (p2 != null)
+                {
+                    ResolveScript(p2.Target);
+                    break;
+                }
+
                 var po = hitTransform.GetComponent<Interactable>();
+                
                 if (po != null)
                 {
                     po.Interact(this);
+                    break;
                 }
-                break;
             }
         }
     }
@@ -108,15 +141,16 @@ public class Picker : MonoBehaviour {
     IEnumerator RotatePickup()
     {
         Vector3 mp = Input.mousePosition;
-        while (!Input.GetButtonUp("Fire2"))
+        while (!Input.GetButtonUp("Fire2")&&HasPickup)
         {
-            yield return null;
             Vector3 mdelta = Input.mousePosition - mp;
             float yRot = Input.GetAxis("Mouse X");
             float xRot = Input.GetAxis("Mouse Y");
 
             PickupAnchor.GetChild(0).localRotation *= Quaternion.Euler (0f, 0f, yRot);
             PickupAnchor.localRotation *= Quaternion.Euler (-xRot, 0f, 0f);
+            yield return null;
+            
         }
     }
 
@@ -124,5 +158,20 @@ public class Picker : MonoBehaviour {
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, transform.position + transform.forward * RaycastLength);
+    }
+
+    public void ResolveScript(string S)
+    {
+        if (S == "Exit")
+        {
+            Application.Quit();
+        }
+        if (S == "Restart")
+        {
+            Destroy(MainMenuInst);
+            HasMainMenu = false;
+            if (HasPickup) DropObject();
+            transform.parent.transform.position = new Vector3(15, 0.6f, 15);
+        }
     }
 }

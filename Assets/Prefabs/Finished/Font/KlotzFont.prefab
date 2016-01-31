@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &155878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 480244}
+  - 114: {fileID: 11405088}
+  m_Layer: 0
+  m_Name: KlotzFont
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &480244
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155878}
+  m_LocalRotation: {x: 0, y: -0.49141523, z: 0, w: 0.8709255}
+  m_LocalPosition: {x: -8.77, y: 2.19, z: 5.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11405088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43648e582b68d4648bcc4ee5374647db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectFont:
+  - {fileID: 179218, guid: 74f9e230012e86c45a41fdcdf5305b73, type: 2}
+  - {fileID: 120572, guid: 3b0ddf9fc367b1e4cbe7b63cef09de63, type: 2}
+  - {fileID: 112016, guid: 764f882d1dcc19548b0b66860900a025, type: 2}
+  - {fileID: 176900, guid: 8aecda61369bf54488d3f6af0a460215, type: 2}
+  - {fileID: 184326, guid: cf9ee2ff7236a444a8f835885814ba8e, type: 2}
+  - {fileID: 171232, guid: 5fcc035a09bc7a74e91dc42e24861ac2, type: 2}
+  - {fileID: 162688, guid: 7f03d592d28c8d448a89ceb3189bf54b, type: 2}
+  - {fileID: 123654, guid: dd388879ed9981f488d8d1cd83677af5, type: 2}
+  - {fileID: 184882, guid: a22f170ed2b05be49a2c4483630f0de1, type: 2}
+  - {fileID: 129746, guid: 9f203861cc836e44ca20917c5618103d, type: 2}
+  - {fileID: 175538, guid: 6667e3269ddc94144a051f85f4beb22c, type: 2}
+  - {fileID: 134856, guid: e62a8dafe738faa469e41b4d8cef2d6b, type: 2}
+  - {fileID: 137004, guid: 98ace9d2ede807043845e15125cd2815, type: 2}
+  - {fileID: 196684, guid: fd8bb16f16654164c84c5f68b7b16185, type: 2}
+  - {fileID: 137676, guid: f1bcdc7422272f143bba66c705a78abd, type: 2}
+  - {fileID: 140342, guid: 18b968ae864fad843b9d9401f35792d3, type: 2}
+  - {fileID: 153628, guid: c15d80eba973ac347a108e407ff8ee04, type: 2}
+  - {fileID: 136456, guid: 9b3a6e054f98d0a4691bc3562ac2ee96, type: 2}
+  - {fileID: 181180, guid: 6aea5fdc5d357354e839cdd43f974b27, type: 2}
+  - {fileID: 113880, guid: fd2bf1c01429bb44fad91a7ff2fca7d1, type: 2}
+  - {fileID: 126850, guid: de92c14cab326884dae650ef7766da38, type: 2}
+  - {fileID: 164452, guid: 3457b23ca164c004db087a2997785c23, type: 2}
+  - {fileID: 193518, guid: 615ca188b44dea545b253d46069015a9, type: 2}
+  - {fileID: 185572, guid: 0fec94a7d769c06458f3019a9b74e071, type: 2}
+  - {fileID: 199404, guid: f14d9213fc531b54d925730864ac03bb, type: 2}
+  - {fileID: 145160, guid: 4117b04c80c2fe24e8111e074efa515c, type: 2}
+  - {fileID: 119766, guid: 7f493b415709933438b91fa81e09d3d9, type: 2}
+  - {fileID: 109504, guid: a9c18283dbcc1904ba7d354e5f0cac52, type: 2}
+  Text: Hallo Welt
+  Target: Restart
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.size
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[0]
+      value: 
+      objectReference: {fileID: 179218, guid: 74f9e230012e86c45a41fdcdf5305b73, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[1]
+      value: 
+      objectReference: {fileID: 120572, guid: 3b0ddf9fc367b1e4cbe7b63cef09de63, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[2]
+      value: 
+      objectReference: {fileID: 112016, guid: 764f882d1dcc19548b0b66860900a025, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[3]
+      value: 
+      objectReference: {fileID: 176900, guid: 8aecda61369bf54488d3f6af0a460215, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[4]
+      value: 
+      objectReference: {fileID: 184326, guid: cf9ee2ff7236a444a8f835885814ba8e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[5]
+      value: 
+      objectReference: {fileID: 171232, guid: 5fcc035a09bc7a74e91dc42e24861ac2, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[6]
+      value: 
+      objectReference: {fileID: 162688, guid: 7f03d592d28c8d448a89ceb3189bf54b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[7]
+      value: 
+      objectReference: {fileID: 123654, guid: dd388879ed9981f488d8d1cd83677af5, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[8]
+      value: 
+      objectReference: {fileID: 184882, guid: a22f170ed2b05be49a2c4483630f0de1, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[9]
+      value: 
+      objectReference: {fileID: 129746, guid: 9f203861cc836e44ca20917c5618103d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[11]
+      value: 
+      objectReference: {fileID: 134856, guid: e62a8dafe738faa469e41b4d8cef2d6b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[10]
+      value: 
+      objectReference: {fileID: 175538, guid: 6667e3269ddc94144a051f85f4beb22c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[12]
+      value: 
+      objectReference: {fileID: 137004, guid: 98ace9d2ede807043845e15125cd2815, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[13]
+      value: 
+      objectReference: {fileID: 196684, guid: fd8bb16f16654164c84c5f68b7b16185, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[14]
+      value: 
+      objectReference: {fileID: 137676, guid: f1bcdc7422272f143bba66c705a78abd, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[15]
+      value: 
+      objectReference: {fileID: 140342, guid: 18b968ae864fad843b9d9401f35792d3, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[16]
+      value: 
+      objectReference: {fileID: 153628, guid: c15d80eba973ac347a108e407ff8ee04, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[17]
+      value: 
+      objectReference: {fileID: 136456, guid: 9b3a6e054f98d0a4691bc3562ac2ee96, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[18]
+      value: 
+      objectReference: {fileID: 181180, guid: 6aea5fdc5d357354e839cdd43f974b27, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[19]
+      value: 
+      objectReference: {fileID: 113880, guid: fd2bf1c01429bb44fad91a7ff2fca7d1, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[20]
+      value: 
+      objectReference: {fileID: 126850, guid: de92c14cab326884dae650ef7766da38, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[21]
+      value: 
+      objectReference: {fileID: 164452, guid: 3457b23ca164c004db087a2997785c23, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[22]
+      value: 
+      objectReference: {fileID: 193518, guid: 615ca188b44dea545b253d46069015a9, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[23]
+      value: 
+      objectReference: {fileID: 185572, guid: 0fec94a7d769c06458f3019a9b74e071, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[24]
+      value: 
+      objectReference: {fileID: 199404, guid: f14d9213fc531b54d925730864ac03bb, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[25]
+      value: 
+      objectReference: {fileID: 145160, guid: 4117b04c80c2fe24e8111e074efa515c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[26]
+      value: 
+      objectReference: {fileID: 119766, guid: 7f493b415709933438b91fa81e09d3d9, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ObjectFont.Array.data[27]
+      value: 
+      objectReference: {fileID: 109504, guid: a9c18283dbcc1904ba7d354e5f0cac52, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 155878}
+  m_IsPrefabParent: 1
