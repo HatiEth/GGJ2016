@@ -45,7 +45,7 @@ public class ConstraintSpawner : MonoBehaviour {
 
                 Bounds Area = new Bounds(transform.position, transform.localScale);
                 Vector3 Position = Area.min + new Vector3((Area.max.x - Area.min.x) * UnityEngine.Random.value, (Area.max.y - Area.min.y) * UnityEngine.Random.value, (Area.max.z - Area.min.z) * UnityEngine.Random.value);
-                Quaternion Rotation = new Quaternion();
+                Quaternion Rotation = transform.rotation;
                 bool no = false;
                 SpawnConstraintOptions Options = new SpawnConstraintOptions();
                 Options.SpawnArea = Area;

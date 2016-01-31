@@ -50,7 +50,7 @@ public class Sun : MonoBehaviour {
         Daytimecontrol time = transform.parent.GetComponent<Daytimecontrol>();
         if (time.gametime > 60 * 60 * 24)
             return; //there is no HOPE
-        transform.rotation=Quaternion.Euler(start+time.gametime*new Vector3(-360f/(60f*60f*24f),0,0));
+        transform.rotation = Quaternion.Euler(start + time.gametime * new Vector3(-360f / (60f * 60f * 24f), 0, 0));
 
         LightColorControl(time);
         AmbientControl(time);
