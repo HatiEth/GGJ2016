@@ -106,12 +106,9 @@ MonoBehaviour:
     Spawnables:
     - Name: Badezeug
       Asset:
-      - {fileID: 155910, guid: b70256f64e004b246880f4407c234a60, type: 2}
       - {fileID: 176850, guid: cfec7e871c751314e939d6cb3331cbf1, type: 2}
       - {fileID: 127598, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
       - {fileID: 107308, guid: f6f5faf2a775c4947b2f348e4dc08437, type: 2}
-      - {fileID: 166616, guid: e8c75cd673cde1246bf6cfb7cf00a747, type: 2}
-      - {fileID: 175718, guid: 63266abd59a24f34c9352d77c6a69a95, type: 2}
       - {fileID: 193956, guid: bee842d65b4a4c847a01db694fedf8f8, type: 2}
       - {fileID: 108956, guid: 42a9fa9a30c433d46af12799222db4fb, type: 2}
       - {fileID: 135172, guid: 0612548ec630b4244b84a5ce2b1e426d, type: 2}
@@ -182,7 +179,47 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Biomes.Array.data[2].Spawnables.Array.data[0].Asset.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Biomes.Array.data[2].Spawnables.Array.data[0].Asset.Array.data[0]
+      value: 
+      objectReference: {fileID: 176850, guid: cfec7e871c751314e939d6cb3331cbf1, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Biomes.Array.data[2].Spawnables.Array.data[0].Asset.Array.data[1]
+      value: 
+      objectReference: {fileID: 127598, guid: 06a3f781ead992b40b91a3e905e86ca8, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Biomes.Array.data[2].Spawnables.Array.data[0].Asset.Array.data[2]
+      value: 
+      objectReference: {fileID: 107308, guid: f6f5faf2a775c4947b2f348e4dc08437, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Biomes.Array.data[2].Spawnables.Array.data[0].Asset.Array.data[3]
+      value: 
+      objectReference: {fileID: 193956, guid: bee842d65b4a4c847a01db694fedf8f8, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Biomes.Array.data[2].Spawnables.Array.data[0].Asset.Array.data[4]
+      value: 
+      objectReference: {fileID: 108956, guid: 42a9fa9a30c433d46af12799222db4fb, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Biomes.Array.data[2].Spawnables.Array.data[0].Asset.Array.data[5]
+      value: 
+      objectReference: {fileID: 135172, guid: 0612548ec630b4244b84a5ce2b1e426d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Biomes.Array.data[2].Spawnables.Array.data[0].Asset.Array.data[6]
+      value: 
+      objectReference: {fileID: 135172, guid: 0612548ec630b4244b84a5ce2b1e426d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Biomes.Array.data[2].Spawnables.Array.data[0].Asset.Array.data[7]
+      value: 
+      objectReference: {fileID: 135172, guid: 0612548ec630b4244b84a5ce2b1e426d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Biomes.Array.data[2].Spawnables.Array.data[0].Asset.Array.data[8]
+      value: 
+      objectReference: {fileID: 135172, guid: 0612548ec630b4244b84a5ce2b1e426d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 160214}
