@@ -59,6 +59,7 @@ GameObject:
   - 114: {fileID: 11461032}
   - 114: {fileID: 11443542}
   - 114: {fileID: 11441940}
+  - 114: {fileID: 11443504}
   m_Layer: 0
   m_Name: BoesesBuch
   m_TagString: Untagged
@@ -294,7 +295,7 @@ Animator:
   m_GameObject: {fileID: 156088}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 82b7a48b4fc6b8340bb424fc825b7312, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 700e023c8c832c140878e1e4a754a615, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -311,6 +312,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d84990ea26b5784894989e7dbf70662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11443504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b979371b024ab1b48a874b51b92bcaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11443542
@@ -342,7 +354,7 @@ MonoBehaviour:
   IncrementalStartChance: 1
   IsFiring: 0
   IsAlive: 1
-  StickyOnCollision: 0
+  StickyOnCollision: 1
   ChargeSpeed: 50
 --- !u!137 &13707882
 SkinnedMeshRenderer:
@@ -422,6 +434,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Mass
       value: 0.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 700e023c8c832c140878e1e4a754a615, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: StickyOnCollision
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

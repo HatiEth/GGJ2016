@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class Daytimecontrol : MonoBehaviour {
     public static Daytimecontrol timeControl;
     public float gametime
@@ -25,4 +26,11 @@ public class Daytimecontrol : MonoBehaviour {
         gametime = startoffset + Time.timeSinceLevelLoad * speed * 10; //FIXME: *10 for debug speed
         //gametime = night;
 	}
+
+    public void reset()
+    {
+        
+        startoffset = (startoffset - Time.timeSinceLevelLoad);
+        Sun.sun.reStart();
+    }
 }
