@@ -35,7 +35,9 @@ public class RoomGenerator : MonoBehaviour {
 	
     void SpawnRooms()
     {
-        
+        int Midx = 0;
+        int Midy = 0;
+
         for (int x = 0; x < Rooms.GetLength(0); x++)
             for (int y = 0; y < Rooms.GetLength(0); y++)
             {
@@ -46,8 +48,16 @@ public class RoomGenerator : MonoBehaviour {
 
                 WallConfig north = (Get(x, y + 1) != Get(x, y)) ? WallConfig.Door : WallConfig.None;
                 WallConfig west = (Get(x + 1, y) != Get(x, y)) ? WallConfig.Door : WallConfig.None;
-                if (north == WallConfig.Door && Random.value < 0.5f) north = WallConfig.Wall;
-                if (west == WallConfig.Door && Random.value < 0.5f) west = WallConfig.Wall;
+
+                if (Rooms.GetLength(0) != 5) throw new System.Exception("Achtung. Hardgecodete stelle! Faulheit");
+                int s = Rooms.GetLength(0) / 2;
+                if (!(x==s && y ==s))
+                {
+                    if (!(x-1==s && y==s)) 
+                    if (north == WallConfig.Door && Random.value < 0.5f) north = WallConfig.Wall;
+                    if (!(x == s && y-1 == s))
+                    if (west == WallConfig.Door && Random.value < 0.5f) west = WallConfig.Wall;
+                }
 
                 scr.DoorNorth = north;
                 scr.DoorWest = west;

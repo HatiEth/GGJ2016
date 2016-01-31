@@ -28,9 +28,13 @@ public class ConstraintSpawner : MonoBehaviour {
     static Dictionary<GameObject, GameObject> Cache;
     static GameObject GetCache(GameObject G)
     {
+        if (G == null)
+            throw new System.Exception("Constraint Spawner null object requested");
         if (Cache == null) Cache = new Dictionary<GameObject, GameObject>();
         if (!Cache.ContainsKey(G))
             Cache[G] = (GameObject)Instantiate(G, new Vector3(0, -100, 0), new Quaternion());
+        if (!Cache.ContainsKey(G))
+            throw new System.Exception(G.ToString() + " Constraint spawner could not spawn blueprint");
         return Cache[G];
     }
 
