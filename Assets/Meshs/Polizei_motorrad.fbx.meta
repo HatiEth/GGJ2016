@@ -1,42 +1,51 @@
 fileFormatVersion: 2
-guid: 56f728e821b4f0b48a17b69e369cf084
-timeCreated: 1454129201
+guid: 47dc0426f70202b428d08c98daa57921
+timeCreated: 1454196260
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Cylinder
-    100002: knoepfe
-    100004: Motorrad
-    100006: //RootNode
-    100008: Polizist
-    100010: rad1
-    100012: rad2
-    400000: Cylinder
-    400002: knoepfe
-    400004: Motorrad
-    400006: //RootNode
-    400008: Polizist
-    400010: rad1
-    400012: rad2
+    100000: Camera
+    100002: Cylinder
+    100004: knoepfe
+    100006: Lamp
+    100008: Motorrad
+    100010: //RootNode
+    100012: Polizist
+    100014: Polizist.001
+    100016: rad1
+    100018: rad2
+    400000: Camera
+    400002: Cylinder
+    400004: knoepfe
+    400006: Lamp
+    400008: Motorrad
+    400010: //RootNode
+    400012: Polizist
+    400014: Polizist.001
+    400016: rad1
+    400018: rad2
     2300000: Cylinder
     2300002: knoepfe
     2300004: Motorrad
     2300006: Polizist
-    2300008: rad1
-    2300010: rad2
+    2300008: Polizist.001
+    2300010: rad1
+    2300012: rad2
     3300000: Cylinder
     3300002: knoepfe
     3300004: Motorrad
     3300006: Polizist
-    3300008: rad1
-    3300010: rad2
-    4300000: Cylinder
-    4300002: Polizist
-    4300004: rad2
-    4300006: knoepfe
-    4300008: Motorrad
-    4300010: rad1
+    3300008: Polizist.001
+    3300010: rad1
+    3300012: rad2
+    4300000: rad1
+    4300002: Motorrad
+    4300004: knoepfe
+    4300006: rad2
+    4300008: Polizist
+    4300010: Cylinder
+    4300012: Polizist.001
   materials:
     importMaterials: 1
     materialName: 0

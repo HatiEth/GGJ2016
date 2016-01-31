@@ -1340,6 +1340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPickedUp: 0
+  OnceWasPickedUp: 0
 --- !u!114 &11474052
 MonoBehaviour:
   m_ObjectHideFlags: 1
