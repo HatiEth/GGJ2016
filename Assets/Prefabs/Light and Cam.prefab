@@ -45,7 +45,7 @@ GameObject:
   - 33: {fileID: 3381734}
   - 23: {fileID: 2336850}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,6 @@ Transform:
   m_Children:
   - {fileID: 417986}
   - {fileID: 498822}
-  - {fileID: 419176}
   m_Father: {fileID: 465574}
   m_RootOrder: 1
 --- !u!4 &417986
@@ -178,6 +177,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 426390}
+  - {fileID: 419176}
   m_Father: {fileID: 400250}
   m_RootOrder: 0
 --- !u!4 &418114
@@ -198,12 +198,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102192}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 0.72, z: 0}
+  m_LocalRotation: {x: 0.1564344, y: 0.000000059604645, z: -0.000000007450581, w: 0.9876884}
+  m_LocalPosition: {x: 0.02, y: 0.88, z: 2.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400250}
-  m_RootOrder: 2
+  m_Father: {fileID: 417986}
+  m_RootOrder: 1
 --- !u!4 &424832
 Transform:
   m_ObjectHideFlags: 1
@@ -236,7 +236,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196638}
   m_LocalRotation: {x: 0, y: 0.8156805, z: 0, w: 0.57850266}
-  m_LocalPosition: {x: -6.04, y: 1.29, z: -0.19}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 424832}
@@ -596,14 +596,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199814}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60e318a6043c1cb4a8ce1c8805bab930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resolution: 1
   screenBlendMode: 0
-  sunTransform: {fileID: 0}
+  sunTransform: {fileID: 486518}
   radialBlurIterations: 2
   sunColor: {r: 1, g: 1, b: 1, a: 1}
   sunThreshold: {r: 0.87, g: 0.74, b: 0.65, a: 1}
@@ -638,6 +638,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RaycastLength: 2.5
   PickupAnchor: {fileID: 426390}
+  MaxPickUpDistance: 5
+  MinPickUpDistance: 2.5
 --- !u!136 &13655056
 CapsuleCollider:
   m_ObjectHideFlags: 1
